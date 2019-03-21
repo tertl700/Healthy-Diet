@@ -1,0 +1,485 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		65931403224406B800397309 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65931402224406B800397309 /* AppDelegate.swift */; };
+		65931405224406B800397309 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65931404224406B800397309 /* ViewController.swift */; };
+		65931408224406B800397309 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65931406224406B800397309 /* Main.storyboard */; };
+		6593140B224406B800397309 /* Healthy_Diet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 65931409224406B800397309 /* Healthy_Diet.xcdatamodeld */; };
+		6593140D224406B800397309 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6593140C224406B800397309 /* Assets.xcassets */; };
+		65931410224406B800397309 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6593140E224406B800397309 /* LaunchScreen.storyboard */; };
+		6593141B224406B800397309 /* Healthy_DietUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6593141A224406B800397309 /* Healthy_DietUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		65931417224406B800397309 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 659313F7224406B700397309 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 659313FE224406B800397309;
+			remoteInfo = "Healthy Diet";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		659313FF224406B800397309 /* Healthy Diet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Healthy Diet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		65931402224406B800397309 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		65931404224406B800397309 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		65931407224406B800397309 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6593140A224406B800397309 /* Healthy_Diet.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Healthy_Diet.xcdatamodel; sourceTree = "<group>"; };
+		6593140C224406B800397309 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6593140F224406B800397309 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		65931411224406B800397309 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65931416224406B800397309 /* Healthy DietUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Healthy DietUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6593141A224406B800397309 /* Healthy_DietUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Healthy_DietUITests.swift; sourceTree = "<group>"; };
+		6593141C224406B800397309 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		659313FC224406B800397309 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65931413224406B800397309 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		659313F6224406B700397309 = {
+			isa = PBXGroup;
+			children = (
+				65931401224406B800397309 /* Healthy Diet */,
+				65931419224406B800397309 /* Healthy DietUITests */,
+				65931400224406B800397309 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		65931400224406B800397309 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				659313FF224406B800397309 /* Healthy Diet.app */,
+				65931416224406B800397309 /* Healthy DietUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		65931401224406B800397309 /* Healthy Diet */ = {
+			isa = PBXGroup;
+			children = (
+				65931402224406B800397309 /* AppDelegate.swift */,
+				65931404224406B800397309 /* ViewController.swift */,
+				65931406224406B800397309 /* Main.storyboard */,
+				6593140C224406B800397309 /* Assets.xcassets */,
+				6593140E224406B800397309 /* LaunchScreen.storyboard */,
+				65931411224406B800397309 /* Info.plist */,
+				65931409224406B800397309 /* Healthy_Diet.xcdatamodeld */,
+			);
+			path = "Healthy Diet";
+			sourceTree = "<group>";
+		};
+		65931419224406B800397309 /* Healthy DietUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6593141A224406B800397309 /* Healthy_DietUITests.swift */,
+				6593141C224406B800397309 /* Info.plist */,
+			);
+			path = "Healthy DietUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		659313FE224406B800397309 /* Healthy Diet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6593141F224406B800397309 /* Build configuration list for PBXNativeTarget "Healthy Diet" */;
+			buildPhases = (
+				659313FB224406B800397309 /* Sources */,
+				659313FC224406B800397309 /* Frameworks */,
+				659313FD224406B800397309 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Healthy Diet";
+			productName = "Healthy Diet";
+			productReference = 659313FF224406B800397309 /* Healthy Diet.app */;
+			productType = "com.apple.product-type.application";
+		};
+		65931415224406B800397309 /* Healthy DietUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65931422224406B800397309 /* Build configuration list for PBXNativeTarget "Healthy DietUITests" */;
+			buildPhases = (
+				65931412224406B800397309 /* Sources */,
+				65931413224406B800397309 /* Frameworks */,
+				65931414224406B800397309 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				65931418224406B800397309 /* PBXTargetDependency */,
+			);
+			name = "Healthy DietUITests";
+			productName = "Healthy DietUITests";
+			productReference = 65931416224406B800397309 /* Healthy DietUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		659313F7224406B700397309 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Tommy Ertl";
+				TargetAttributes = {
+					659313FE224406B800397309 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					65931415224406B800397309 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 659313FE224406B800397309;
+					};
+				};
+			};
+			buildConfigurationList = 659313FA224406B700397309 /* Build configuration list for PBXProject "Healthy Diet" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 659313F6224406B700397309;
+			productRefGroup = 65931400224406B800397309 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				659313FE224406B800397309 /* Healthy Diet */,
+				65931415224406B800397309 /* Healthy DietUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		659313FD224406B800397309 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65931410224406B800397309 /* LaunchScreen.storyboard in Resources */,
+				6593140D224406B800397309 /* Assets.xcassets in Resources */,
+				65931408224406B800397309 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65931414224406B800397309 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		659313FB224406B800397309 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6593140B224406B800397309 /* Healthy_Diet.xcdatamodeld in Sources */,
+				65931405224406B800397309 /* ViewController.swift in Sources */,
+				65931403224406B800397309 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65931412224406B800397309 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6593141B224406B800397309 /* Healthy_DietUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		65931418224406B800397309 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 659313FE224406B800397309 /* Healthy Diet */;
+			targetProxy = 65931417224406B800397309 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		65931406224406B800397309 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				65931407224406B800397309 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6593140E224406B800397309 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6593140F224406B800397309 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6593141D224406B800397309 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6593141E224406B800397309 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		65931420224406B800397309 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UT4Q8NM668;
+				INFOPLIST_FILE = "Healthy Diet/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.thomas-ertl.Healthy-Diet";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		65931421224406B800397309 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UT4Q8NM668;
+				INFOPLIST_FILE = "Healthy Diet/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.thomas-ertl.Healthy-Diet";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		65931423224406B800397309 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UT4Q8NM668;
+				INFOPLIST_FILE = "Healthy DietUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.thomas-ertl.Healthy-DietUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Healthy Diet";
+			};
+			name = Debug;
+		};
+		65931424224406B800397309 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UT4Q8NM668;
+				INFOPLIST_FILE = "Healthy DietUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.thomas-ertl.Healthy-DietUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Healthy Diet";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		659313FA224406B700397309 /* Build configuration list for PBXProject "Healthy Diet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6593141D224406B800397309 /* Debug */,
+				6593141E224406B800397309 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6593141F224406B800397309 /* Build configuration list for PBXNativeTarget "Healthy Diet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65931420224406B800397309 /* Debug */,
+				65931421224406B800397309 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65931422224406B800397309 /* Build configuration list for PBXNativeTarget "Healthy DietUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65931423224406B800397309 /* Debug */,
+				65931424224406B800397309 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		65931409224406B800397309 /* Healthy_Diet.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6593140A224406B800397309 /* Healthy_Diet.xcdatamodel */,
+			);
+			currentVersion = 6593140A224406B800397309 /* Healthy_Diet.xcdatamodel */;
+			path = Healthy_Diet.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 659313F7224406B700397309 /* Project object */;
+}
