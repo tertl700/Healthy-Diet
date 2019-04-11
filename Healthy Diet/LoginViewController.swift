@@ -8,13 +8,17 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        spinner.startAnimating()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            self.performSegue(withIdentifier: "createAccountSegue", sender: Any?.self)
+        }
     }
-
 
 }
 
