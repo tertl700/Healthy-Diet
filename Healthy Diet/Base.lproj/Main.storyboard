@@ -89,7 +89,7 @@
                                     <navigationItem title="Create Account" id="SDf-Ft-l7H">
                                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="0iN-Km-tYg">
                                             <connections>
-                                                <segue destination="J12-5v-79e" kind="show" id="Z8s-Aw-QzQ"/>
+                                                <action selector="save:" destination="SUl-de-gn1" id="kiJ-HA-bpM"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -117,6 +117,11 @@
                     <navigationItem key="navigationItem" title="Create" id="w3F-jz-uLe">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="AdJ-Dh-TRE"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="ageTextField" destination="NTU-EB-CXk" id="Qqr-Ws-sI5"/>
+                        <outlet property="nameTextField" destination="9e3-5G-leV" id="kQ0-JL-ByI"/>
+                        <segue destination="J12-5v-79e" kind="show" identifier="accountToMainSegue" id="GNI-sW-uMb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qof-mA-bWP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -192,6 +197,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Z8s-Aw-QzQ"/>
+        <segue reference="GNI-sW-uMb"/>
     </inferredMetricsTieBreakers>
 </document>

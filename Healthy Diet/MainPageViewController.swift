@@ -10,9 +10,11 @@ import UIKit
 
 class MainPageViewController: UIViewController {
 
+    var person: Person?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print(person?.name)
         // Do any additional setup after loading the view.
         
     }

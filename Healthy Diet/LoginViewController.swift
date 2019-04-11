@@ -7,17 +7,62 @@
 //
 
 import UIKit
+import CoreData
 
 class LoginViewController: UIViewController {
     @IBOutlet weak var spinner: UIActivityIndicatorView!
 
+    var person: Person?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         spinner.startAnimating()
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-            self.performSegue(withIdentifier: "createAccountSegue", sender: Any?.self)
+            if self.fetchUser() {
+                self.performSegue(withIdentifier: "mainSegue", sender: self)
+            } else {
+                self.performSegue(withIdentifier: "createAccountSegue", sender: self)
+            }
         }
+    }
+    
+    func fetchUser() -> Bool {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return false
+        }
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetchRequest: NSFetchRequest<Person> = Person.fetchRequest()
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
+        
+        do {
+            person = try managedContext.fetch(fetchRequest).first
+        } catch {
+            alertNotifyUser(message: "Fetch for person could not be performed.")
+            return false
+        }
+        if person == nil { return false }
+        
+        return true
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? MainPageViewController {
+            if segue.identifier == "mainSegue" {
+                destination.person = person
+            }
+        }
+    }
+    
+    func alertNotifyUser(message: String) {
+        let alert = UIAlertController(title: "Alert", message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel) {
+            (alertAction) -> Void in
+            print("OK selected")
+        })
+        
+        self.present(alert, animated: true, completion: nil)
     }
 
 }
