@@ -15,7 +15,6 @@ class CreateAccountViewController: UIViewController {
     var person: Person?
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
     
@@ -42,7 +41,7 @@ class CreateAccountViewController: UIViewController {
         }
         
         if person == nil {
-            person = Person(name: trimmedName, age: castedAge!, height: 0, weight: 0, activity: 0)
+            person = Person(name: trimmedName, age: castedAge!, height: 0.0, weight: 0.0, activity: 0)
         }
         
         if let person = person {

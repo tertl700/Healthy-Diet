@@ -15,12 +15,7 @@ public class Person: NSManagedObject {
     convenience init?(name: String, age: Int16, height: Float, weight: Float, activity: Int16) {
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
         
-        guard let managedContext = appDelegate?.persistentContainer.viewContext,
-            name != "",
-            age < 0,
-            height < 0,
-            weight < 0,
-            activity < 0 else {
+        guard let managedContext = appDelegate?.persistentContainer.viewContext, name != "" else {
             return nil
         }
         

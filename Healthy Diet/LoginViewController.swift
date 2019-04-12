@@ -18,6 +18,9 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         spinner.startAnimating()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
             if self.fetchUser() {
                 self.performSegue(withIdentifier: "mainSegue", sender: self)
@@ -38,6 +41,8 @@ class LoginViewController: UIViewController {
         
         do {
             person = try managedContext.fetch(fetchRequest).first
+            managedContext.delete(person!)
+            return false
         } catch {
             alertNotifyUser(message: "Fetch for person could not be performed.")
             return false
