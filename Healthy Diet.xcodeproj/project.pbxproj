@@ -11,7 +11,6 @@
 		44273550225F61D900ACE0D6 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4427354F225F61D900ACE0D6 /* MainPageViewController.swift */; };
 		44273553225F6F4900ACE0D6 /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44273551225F6F4900ACE0D6 /* Person+CoreDataClass.swift */; };
 		44273554225F6F4900ACE0D6 /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44273552225F6F4900ACE0D6 /* Person+CoreDataProperties.swift */; };
-		4474D617226615EE00F41C52 /* FoodCalcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4474D616226615EE00F41C52 /* FoodCalcViewController.swift */; };
 		65931403224406B800397309 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65931402224406B800397309 /* AppDelegate.swift */; };
 		65931405224406B800397309 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65931404224406B800397309 /* LoginViewController.swift */; };
 		65931408224406B800397309 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65931406224406B800397309 /* Main.storyboard */; };
@@ -36,7 +35,6 @@
 		4427354F225F61D900ACE0D6 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		44273551225F6F4900ACE0D6 /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataClass.swift"; sourceTree = "<group>"; };
 		44273552225F6F4900ACE0D6 /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		4474D616226615EE00F41C52 /* FoodCalcViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCalcViewController.swift; sourceTree = "<group>"; };
 		659313FF224406B800397309 /* Healthy Diet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Healthy Diet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65931402224406B800397309 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65931404224406B800397309 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -104,7 +102,6 @@
 				65931404224406B800397309 /* LoginViewController.swift */,
 				4427354F225F61D900ACE0D6 /* MainPageViewController.swift */,
 				4427354D225F619300ACE0D6 /* CreateAccountViewController.swift */,
-				4474D616226615EE00F41C52 /* FoodCalcViewController.swift */,
 				65931406224406B800397309 /* Main.storyboard */,
 				6593140C224406B800397309 /* Assets.xcassets */,
 				6593140E224406B800397309 /* LaunchScreen.storyboard */,
@@ -224,7 +221,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				44273554225F6F4900ACE0D6 /* Person+CoreDataProperties.swift in Sources */,
-				4474D617226615EE00F41C52 /* FoodCalcViewController.swift in Sources */,
 				44273550225F61D900ACE0D6 /* MainPageViewController.swift in Sources */,
 				4427354E225F619300ACE0D6 /* CreateAccountViewController.swift in Sources */,
 				44273553225F6F4900ACE0D6 /* Person+CoreDataClass.swift in Sources */,
