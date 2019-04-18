@@ -13,6 +13,12 @@ struct Food {
     let name: String
 }
 
+enum MealType: Int {
+    case breakfast
+    case lunch
+    case dinner
+}
+
 enum SerializationError: Error {
     case noName(String)
     case noCal(String)
@@ -53,9 +59,7 @@ extension Food {
                     return
                 }
                 for case let result in jsonArray {
-                    print(result)
                     if let food = try Food(json: result) {
-                        print(food)
                         foods.append(food)
                     }
                 }
