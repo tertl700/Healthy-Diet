@@ -2,7 +2,7 @@
 //  Person+CoreDataProperties.swift
 //  Healthy Diet
 //
-//  Created by Ryan Lokugamage on 4/11/19.
+//  Created by Ryan Lokugamage on 4/23/19.
 //  Copyright © 2019 Tommy Ertl. All rights reserved.
 //
 //
@@ -17,10 +17,14 @@ extension Person {
         return NSFetchRequest<Person>(entityName: "Person")
     }
 
-    @NSManaged public var name: String?
+    @NSManaged public var activity: Double
     @NSManaged public var age: Int16
-    @NSManaged public var height: Float
-    @NSManaged public var weight: Float
-    @NSManaged public var activity: Int16
+    @NSManaged public var height: Double
+    @NSManaged public var name: String?
+    @NSManaged public var weight: Double
+    @NSManaged public var gender: Int16
+    @NSManaged public var calorieFloor: Double
+    @NSManaged public var calorieCeiling: Double
+    @NSManaged public var weightDesire: Int16
 
 }
