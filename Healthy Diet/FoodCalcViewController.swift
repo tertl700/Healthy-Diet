@@ -15,6 +15,7 @@ class FoodCalcViewController: UIViewController, UITableViewDelegate, UITableView
     var lunchFoods: [Food] = []
     var dinnerFoods: [Food] = []
     var selectType: MealType?
+    var totalCalorie: Double = 0.0
     
     @IBOutlet weak var mealListTableView: UITableView!
     @IBOutlet weak var selectButton: UIButton!
@@ -25,20 +26,42 @@ class FoodCalcViewController: UIViewController, UITableViewDelegate, UITableView
         selectType = MealType.breakfast
     }
     
+    @IBAction func exportToFoodLog(_ sender: Any) {
+        totalCalorie = calculateCalorie()
+        var message = ""
+        let foodLog = FoodLog(calorie: totalCalorie, breakfast: breakfastFoods, lunch: lunchFoods, dinner: dinnerFoods)
+        
+        if let foodLog = foodLog {
+            do {
+                let managedContext = foodLog.managedObjectContext
+                try managedContext?.save()
+                message = "food exported successfully"
+            } catch {
+                message = "food exported unsuccessfully"
+            }
+        }
+        
+        let alert = UIAlertController(title: "Export Status", message: message, preferredStyle: UIAlertController.Style.alert)
+        
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (alertAction) -> Void in }))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     @IBAction func changeSelectType(_ sender: Any) {
         let alert = UIAlertController(title: "Choose Meal", message: nil, preferredStyle: UIAlertController.Style.actionSheet)
 
         alert.addAction(UIAlertAction(title: "Breakfast", style: UIAlertAction.Style.default, handler: { (alertAction) -> Void in
                 self.selectType = MealType.breakfast
-                self.selectButton.titleLabel?.text = "Breakfast"
+                self.selectButton.setTitle("Breakfast", for: .normal)
         }))
         alert.addAction(UIAlertAction(title: "Lunch", style: UIAlertAction.Style.default, handler: { (alertAction) -> Void in
             self.selectType = MealType.lunch
-            self.selectButton.titleLabel?.text = "Lunch"
+            self.selectButton.setTitle("Lunch", for: .normal)
         }))
         alert.addAction(UIAlertAction(title: "Dinner", style: UIAlertAction.Style.default, handler: { (alertAction) -> Void in
             self.selectType = MealType.dinner
-            self.selectButton.titleLabel?.text = "Dinner"
+            self.selectButton.setTitle("Dinner", for: .normal)
         }))
         
         self.present(alert, animated: true, completion: nil)
@@ -101,7 +124,6 @@ class FoodCalcViewController: UIViewController, UITableViewDelegate, UITableView
         if let source = segue.source as? FoodFinderViewController {
             if let selectType = selectType {
                 if let food = source.selectedFood {
-                    print(food)
                     switch selectType {
                     case MealType.breakfast:
                         breakfastFoods.append(food)
@@ -115,6 +137,14 @@ class FoodCalcViewController: UIViewController, UITableViewDelegate, UITableView
         }
         
         mealListTableView.reloadData()
+    }
+    
+    func calculateCalorie() -> Double {
+        var calorie = 0.0
+        calorie += breakfastFoods.reduce(0.0) { cal,food in cal + food.calorie }
+        calorie += lunchFoods.reduce(0.0) { cal,food in cal + food.calorie }
+        calorie += dinnerFoods.reduce(0.0) { cal,food in cal + food.calorie }
+        return calorie
     }
     
 }

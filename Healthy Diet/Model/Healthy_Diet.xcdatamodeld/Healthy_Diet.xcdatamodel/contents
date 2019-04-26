@@ -10,6 +10,7 @@
     </entity>
     <entity name="FoodLog" representedClassName="FoodLog" syncable="YES">
         <attribute name="rawDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="totalCalorie" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="breakfast" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Food" inverseName="breakfastLog" inverseEntity="Food" syncable="YES"/>
         <relationship name="dinner" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Food" inverseName="dinnerLog" inverseEntity="Food" syncable="YES"/>
         <relationship name="lunch" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Food" inverseName="lunchLog" inverseEntity="Food" syncable="YES"/>
@@ -23,7 +24,7 @@
     </entity>
     <elements>
         <element name="Food" positionX="-54" positionY="27" width="128" height="135"/>
-        <element name="FoodLog" positionX="-45" positionY="45" width="128" height="105"/>
+        <element name="FoodLog" positionX="-45" positionY="45" width="128" height="120"/>
         <element name="Person" positionX="-54" positionY="-9" width="128" height="120"/>
     </elements>
 </model>

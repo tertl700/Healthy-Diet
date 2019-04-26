@@ -16,7 +16,7 @@
 		44961BB022721867001E25E2 /* Food+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44961BAC22721867001E25E2 /* Food+CoreDataClass.swift */; };
 		44961BB122721867001E25E2 /* Food+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44961BAD22721867001E25E2 /* Food+CoreDataProperties.swift */; };
 		44961BB222721867001E25E2 /* FoodLog+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44961BAE22721867001E25E2 /* FoodLog+CoreDataClass.swift */; };
-		44961BB322721867001E25E2 /* FoodLog+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44961BAF22721867001E25E2 /* FoodLog+CoreDataProperties.swift */; };
+		44961BB522728ABD001E25E2 /* FoodLog+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44961BB422728ABD001E25E2 /* FoodLog+CoreDataProperties.swift */; };
 		65931403224406B800397309 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65931402224406B800397309 /* AppDelegate.swift */; };
 		65931405224406B800397309 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65931404224406B800397309 /* LoginViewController.swift */; };
 		65931408224406B800397309 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65931406224406B800397309 /* Main.storyboard */; };
@@ -46,7 +46,7 @@
 		44961BAC22721867001E25E2 /* Food+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Food+CoreDataClass.swift"; sourceTree = "<group>"; };
 		44961BAD22721867001E25E2 /* Food+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Food+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		44961BAE22721867001E25E2 /* FoodLog+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FoodLog+CoreDataClass.swift"; sourceTree = "<group>"; };
-		44961BAF22721867001E25E2 /* FoodLog+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FoodLog+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		44961BB422728ABD001E25E2 /* FoodLog+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FoodLog+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		659313FF224406B800397309 /* Healthy Diet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Healthy Diet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65931402224406B800397309 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65931404224406B800397309 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -84,7 +84,7 @@
 				44961BAC22721867001E25E2 /* Food+CoreDataClass.swift */,
 				44961BAD22721867001E25E2 /* Food+CoreDataProperties.swift */,
 				44961BAE22721867001E25E2 /* FoodLog+CoreDataClass.swift */,
-				44961BAF22721867001E25E2 /* FoodLog+CoreDataProperties.swift */,
+				44961BB422728ABD001E25E2 /* FoodLog+CoreDataProperties.swift */,
 				65931409224406B800397309 /* Healthy_Diet.xcdatamodeld */,
 				44273551225F6F4900ACE0D6 /* Person+CoreDataClass.swift */,
 				44273552225F6F4900ACE0D6 /* Person+CoreDataProperties.swift */,
@@ -246,7 +246,7 @@
 				4427354E225F619300ACE0D6 /* CreateAccountViewController.swift in Sources */,
 				44961BB022721867001E25E2 /* Food+CoreDataClass.swift in Sources */,
 				44273553225F6F4900ACE0D6 /* Person+CoreDataClass.swift in Sources */,
-				44961BB322721867001E25E2 /* FoodLog+CoreDataProperties.swift in Sources */,
+				44961BB522728ABD001E25E2 /* FoodLog+CoreDataProperties.swift in Sources */,
 				6593140B224406B800397309 /* Healthy_Diet.xcdatamodeld in Sources */,
 				65931405224406B800397309 /* LoginViewController.swift in Sources */,
 				65931403224406B800397309 /* AppDelegate.swift in Sources */,

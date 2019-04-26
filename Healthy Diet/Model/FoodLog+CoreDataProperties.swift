@@ -18,6 +18,7 @@ extension FoodLog {
     }
 
     @NSManaged public var rawDate: NSDate?
+    @NSManaged public var totalCalorie: Double
     @NSManaged public var breakfast: NSSet?
     @NSManaged public var dinner: NSSet?
     @NSManaged public var lunch: NSSet?

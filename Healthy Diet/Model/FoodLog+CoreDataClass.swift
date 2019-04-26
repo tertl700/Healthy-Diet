@@ -21,7 +21,7 @@ public class FoodLog: NSManagedObject {
         }
     }
     
-    convenience init?(breakfast: [Food], lunch: [Food], dinner: [Food]) {
+    convenience init?(calorie: Double, breakfast: [Food], lunch: [Food], dinner: [Food]) {
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
         
         guard let managedContext = appDelegate?.persistentContainer.viewContext else {
@@ -29,6 +29,7 @@ public class FoodLog: NSManagedObject {
         }
         
         self.init(entity: FoodLog.entity(), insertInto: managedContext)
+        self.totalCalorie = calorie
         self.date = Date(timeIntervalSinceNow: 0)
         self.breakfast?.addingObjects(from: breakfast)
         self.lunch?.addingObjects(from: lunch)

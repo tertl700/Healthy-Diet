@@ -177,6 +177,14 @@
                                     <outlet property="delegate" destination="2h6-Mc-yTE" id="nkW-1R-Xbx"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YeI-Tk-bGi">
+                                <rect key="frame" x="121" y="108" width="132" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Export to Log"/>
+                                <connections>
+                                    <action selector="exportToFoodLog:" destination="2h6-Mc-yTE" eventType="touchUpInside" id="FTS-Tp-x46"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M2V-0q-Nv0">
                                 <rect key="frame" x="16" y="64" width="94" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
@@ -191,9 +199,13 @@
                             <constraint firstItem="KZ8-AJ-wm1" firstAttribute="trailing" secondItem="wEV-Pa-0hO" secondAttribute="trailing" constant="16" id="Cdj-zY-lAL"/>
                             <constraint firstItem="wEV-Pa-0hO" firstAttribute="leading" secondItem="KZ8-AJ-wm1" secondAttribute="leading" constant="248" id="Fe9-pe-GSq"/>
                             <constraint firstItem="Q4j-OJ-0z7" firstAttribute="top" secondItem="wEV-Pa-0hO" secondAttribute="bottom" constant="52" id="JBc-aq-TVa"/>
+                            <constraint firstItem="Q4j-OJ-0z7" firstAttribute="top" secondItem="YeI-Tk-bGi" secondAttribute="bottom" constant="8" id="Ktf-og-aeG"/>
+                            <constraint firstItem="YeI-Tk-bGi" firstAttribute="top" secondItem="KZ8-AJ-wm1" secondAttribute="top" constant="44" id="Mea-PQ-2wk"/>
                             <constraint firstItem="KZ8-AJ-wm1" firstAttribute="trailing" secondItem="Q4j-OJ-0z7" secondAttribute="trailing" id="Nbr-88-rL3"/>
                             <constraint firstItem="wEV-Pa-0hO" firstAttribute="top" secondItem="KZ8-AJ-wm1" secondAttribute="top" id="QaC-Xy-CuZ"/>
+                            <constraint firstItem="KZ8-AJ-wm1" firstAttribute="trailing" secondItem="YeI-Tk-bGi" secondAttribute="trailing" constant="122" id="VcB-Gt-LgJ"/>
                             <constraint firstItem="M2V-0q-Nv0" firstAttribute="top" secondItem="KZ8-AJ-wm1" secondAttribute="top" id="bq4-3w-XHv"/>
+                            <constraint firstItem="YeI-Tk-bGi" firstAttribute="leading" secondItem="KZ8-AJ-wm1" secondAttribute="leading" constant="121" id="ge9-5K-p7Y"/>
                             <constraint firstItem="Q4j-OJ-0z7" firstAttribute="top" secondItem="M2V-0q-Nv0" secondAttribute="bottom" constant="52" id="rcz-EO-4km"/>
                             <constraint firstItem="M2V-0q-Nv0" firstAttribute="leading" secondItem="KZ8-AJ-wm1" secondAttribute="leading" constant="16" id="rnU-ny-Pu4"/>
                             <constraint firstItem="KZ8-AJ-wm1" firstAttribute="bottom" secondItem="Q4j-OJ-0z7" secondAttribute="bottom" id="tae-kc-I3I"/>
