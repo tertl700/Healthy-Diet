@@ -11,17 +11,37 @@ import UIKit
 class FoodCalcViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
-    var breakfastFoods: [Food] = [Food(cal: 12.1, name: "food 1")]
-    var lunchFoods: [Food] = [Food(cal: 12.1, name: "food 2")]
-    var dinnerFoods: [Food] = [Food(cal: 12.1, name: "food 3")]
+    var breakfastFoods: [Food] = []
+    var lunchFoods: [Food] = []
+    var dinnerFoods: [Food] = []
     var selectType: MealType?
     
     @IBOutlet weak var mealListTableView: UITableView!
+    @IBOutlet weak var selectButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         selectType = MealType.breakfast
+    }
+    
+    @IBAction func changeSelectType(_ sender: Any) {
+        let alert = UIAlertController(title: "Choose Meal", message: nil, preferredStyle: UIAlertController.Style.actionSheet)
+
+        alert.addAction(UIAlertAction(title: "Breakfast", style: UIAlertAction.Style.default, handler: { (alertAction) -> Void in
+                self.selectType = MealType.breakfast
+                self.selectButton.titleLabel?.text = "Breakfast"
+        }))
+        alert.addAction(UIAlertAction(title: "Lunch", style: UIAlertAction.Style.default, handler: { (alertAction) -> Void in
+            self.selectType = MealType.lunch
+            self.selectButton.titleLabel?.text = "Lunch"
+        }))
+        alert.addAction(UIAlertAction(title: "Dinner", style: UIAlertAction.Style.default, handler: { (alertAction) -> Void in
+            self.selectType = MealType.dinner
+            self.selectButton.titleLabel?.text = "Dinner"
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -69,17 +89,12 @@ class FoodCalcViewController: UIViewController, UITableViewDelegate, UITableView
         }
             
         if let meal = mealFoods?[indexPath.row] {
-            cell.textLabel?.text = meal.name
-            cell.detailTextLabel?.text = String(meal.cal)
+            let name = meal.foodName ?? ""
+            cell.textLabel?.text = "\(name) \(meal.calorie)"
+            cell.detailTextLabel?.text = meal.portion
         }
         
         return cell
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? FoodFinderViewController {
-            destination.type = selectType
-        }
     }
     
     @IBAction func unwindToFoodCalc(for segue: UIStoryboardSegue) {

@@ -177,6 +177,14 @@
                                     <outlet property="delegate" destination="2h6-Mc-yTE" id="nkW-1R-Xbx"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M2V-0q-Nv0">
+                                <rect key="frame" x="16" y="64" width="94" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Breakfast"/>
+                                <connections>
+                                    <action selector="changeSelectType:" destination="2h6-Mc-yTE" eventType="touchUpInside" id="fKv-LN-iju"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -185,6 +193,9 @@
                             <constraint firstItem="Q4j-OJ-0z7" firstAttribute="top" secondItem="wEV-Pa-0hO" secondAttribute="bottom" constant="52" id="JBc-aq-TVa"/>
                             <constraint firstItem="KZ8-AJ-wm1" firstAttribute="trailing" secondItem="Q4j-OJ-0z7" secondAttribute="trailing" id="Nbr-88-rL3"/>
                             <constraint firstItem="wEV-Pa-0hO" firstAttribute="top" secondItem="KZ8-AJ-wm1" secondAttribute="top" id="QaC-Xy-CuZ"/>
+                            <constraint firstItem="M2V-0q-Nv0" firstAttribute="top" secondItem="KZ8-AJ-wm1" secondAttribute="top" id="bq4-3w-XHv"/>
+                            <constraint firstItem="Q4j-OJ-0z7" firstAttribute="top" secondItem="M2V-0q-Nv0" secondAttribute="bottom" constant="52" id="rcz-EO-4km"/>
+                            <constraint firstItem="M2V-0q-Nv0" firstAttribute="leading" secondItem="KZ8-AJ-wm1" secondAttribute="leading" constant="16" id="rnU-ny-Pu4"/>
                             <constraint firstItem="KZ8-AJ-wm1" firstAttribute="bottom" secondItem="Q4j-OJ-0z7" secondAttribute="bottom" id="tae-kc-I3I"/>
                             <constraint firstItem="Q4j-OJ-0z7" firstAttribute="leading" secondItem="KZ8-AJ-wm1" secondAttribute="leading" id="xqy-7l-Xrh"/>
                         </constraints>
@@ -194,6 +205,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="mealListTableView" destination="Q4j-OJ-0z7" id="xyx-Ez-nDX"/>
+                        <outlet property="selectButton" destination="M2V-0q-Nv0" id="iXR-xq-1UF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qpq-YC-flW" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -1,17 +1,14 @@
 //
-//  FoodModel.swift
+//  Food+CoreDataClass.swift
 //  Healthy Diet
 //
-//  Created by Ryan Lokugamage on 4/16/19.
+//  Created by Ryan Lokugamage on 4/25/19.
 //  Copyright © 2019 Tommy Ertl. All rights reserved.
 //
+//
 
-import Foundation
-
-struct Food {
-    let cal: Double
-    let name: String
-}
+import UIKit
+import CoreData
 
 enum MealType: Int {
     case breakfast
@@ -22,19 +19,31 @@ enum MealType: Int {
 enum SerializationError: Error {
     case noName(String)
     case noCal(String)
+    case noPor(String)
 }
 
-extension Food {
-    init?(json: [String: Any]) throws {
+@objc(Food)
+public class Food: NSManagedObject {
+    convenience init?(json: [String: Any]) throws {
+        let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        
+        guard let managedContext = appDelegate?.persistentContainer.viewContext else {
+            return nil
+        }
         guard let name = json["name"] as? String else {
             throw SerializationError.noName(json.values.description)
         }
         guard let cal = json["cal"] as? Double else {
             throw SerializationError.noCal(json.values.description)
         }
+        guard let por = json["portion"] as? String else {
+            throw SerializationError.noPor(json.values.description)
+        }
         
-        self.cal = cal
-        self.name = name
+        self.init(entity: Food.entity(), insertInto: managedContext)
+        self.foodName = name
+        self.calorie = cal
+        self.portion = por
     }
     
     static func foods(search: String, completion: @escaping ([Food]) -> Void) {
@@ -54,7 +63,7 @@ extension Food {
             do{
                 let json = try JSONSerialization.jsonObject(with:
                     data, options: [])
-
+                
                 guard let jsonArray = json as? [[String: Any]] else {
                     return
                 }
