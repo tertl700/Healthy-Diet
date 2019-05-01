@@ -10,9 +10,15 @@ import UIKit
 
 class CreateAccountViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
 
+    @IBOutlet weak var inchesHeightTextField: UITextField!
     
     
+    @IBOutlet weak var desiredWeightTextField: UITextField!
     
+    
+    @IBOutlet weak var feetHeightTextField: UITextField!
+    
+    @IBOutlet weak var activityTextField: UITextField!
     @IBOutlet weak var genderTextField: UITextField!
     
     @IBOutlet weak var weightTextField: UITextField!
@@ -22,9 +28,7 @@ class CreateAccountViewController: UIViewController, UIPickerViewDelegate, UIPic
     @IBOutlet weak var picker: UIPickerView!
     
     var genderList = ["Male", "Female"]
-    var ageList = ["18-25", "25-30", "30-35", "35-40", "40-45"]
-    var activityList = ["Couach Potato", "Average", "Active"]
-    var weightList = ["95", "96", "98", "99", "100", "101", "102", "103", "104", "105", "106", "107", "108", "109", "110", "111", "112", "113"]
+    var activityList = ["Sedentary", "Slighty Active", "Moderately Active", "Very Active", "Extremely Active"]
     
     var activeField: UITextField!
     
@@ -36,17 +40,12 @@ class CreateAccountViewController: UIViewController, UIPickerViewDelegate, UIPic
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        if(activeField == ageTextField)
-        {
-            return ageList.count
-        }else if(activeField == genderTextField){
+        if(activeField == genderTextField){
             return genderList.count
-        }else if(activeField == weightTextField){
-            return weightList.count
+        }else{
+            return activityList.count
         }
-        else{
-            return ageList.count
-        }
+        
     }
     
     
@@ -54,31 +53,65 @@ class CreateAccountViewController: UIViewController, UIPickerViewDelegate, UIPic
         if(activeField == genderTextField){
             self.genderTextField.text = self.genderList[row]
             picker.isHidden = true
-        } else if(activeField == weightTextField){
-            self.weightTextField.text = self.weightList[row]
-            picker.isHidden = true
-        } else {
-            self.ageTextField.text = self.ageList[row]
+        } else if(activeField == activityTextField){
+            self.activityTextField.text = self.activityList[row]
             picker.isHidden = true
         }
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if(activeField == ageTextField){
-            return ageList[row]
-        }else if(activeField == genderTextField){
+        if(activeField == genderTextField){
             return genderList[row]
-        }else if(activeField == weightTextField){
-            return weightList[row]
-        }else {
-            return ageList[row]
+        }else{
+            return activityList[row]
         }
     }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if textField == weightTextField {
+            let allowedCharacters = CharacterSet(charactersIn:"0123456789")
+            let characterSet = CharacterSet(charactersIn: string)
+            return allowedCharacters.isSuperset(of: characterSet)
+        }
+        if textField == ageTextField {
+            let allowedCharacters = CharacterSet(charactersIn:"0123456789")
+            let characterSet = CharacterSet(charactersIn: string)
+            return allowedCharacters.isSuperset(of: characterSet)
+        }
+        if textField == feetHeightTextField {
+            let allowedCharacters = CharacterSet(charactersIn:"4567")
+            let characterSet = CharacterSet(charactersIn: string)
+            return allowedCharacters.isSuperset(of: characterSet)
+        }
+        if textField == inchesHeightTextField {
+            let allowedCharacters = CharacterSet(charactersIn:"0123456789")
+            let characterSet = CharacterSet(charactersIn: string)
+            return allowedCharacters.isSuperset(of: characterSet)
+        }
+        if textField == desiredWeightTextField {
+            let allowedCharacters = CharacterSet(charactersIn:"0123456789")
+            let characterSet = CharacterSet(charactersIn: string)
+            return allowedCharacters.isSuperset(of: characterSet)
+        }
+
+
+        
+        return true
+    }
+    
     
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         
-        if(textField != nameTextField){
+        if(textField == activityTextField)
+        {
+            picker.isHidden = false
+            activeField = textField
+            picker.reloadInputViews()
+            picker.reloadAllComponents()
+            
+        }else if(textField == genderTextField)
+        {
             picker.isHidden = false
             activeField = textField
             picker.reloadInputViews()

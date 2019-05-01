@@ -19,7 +19,14 @@ public class Person: NSManagedObject {
             return nil
         }
         
-        
+/*
+
+         Activity levels are in an email from Haley.
+         
+         if sedentay
+         
+         
+*/
         
         self.init(entity: Person.entity(), insertInto: managedContext)
         self.name = name
