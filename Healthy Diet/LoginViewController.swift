@@ -31,6 +31,7 @@ class LoginViewController: UIViewController {
     }
     
     func fetchUser() -> Bool {
+        /*
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return false
         }
@@ -48,8 +49,8 @@ class LoginViewController: UIViewController {
             return false
         }
         if person == nil { return false }
-        
-        return true
+        */
+        return false
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
