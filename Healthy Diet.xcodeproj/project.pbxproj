@@ -10,8 +10,12 @@
 		4427354E225F619300ACE0D6 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4427354D225F619300ACE0D6 /* CreateAccountViewController.swift */; };
 		44273550225F61D900ACE0D6 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4427354F225F61D900ACE0D6 /* MainPageViewController.swift */; };
 		44273553225F6F4900ACE0D6 /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44273551225F6F4900ACE0D6 /* Person+CoreDataClass.swift */; };
-		44273554225F6F4900ACE0D6 /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44273552225F6F4900ACE0D6 /* Person+CoreDataProperties.swift */; };
+
+		
 		6536C706227B4A45008D615A /* FoodLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6536C705227B4A45008D615A /* FoodLogViewController.swift */; };
+
+		44E2F3F3226F603E00001529 /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E2F3F2226F603E00001529 /* Person+CoreDataProperties.swift */; };
+
 		65931403224406B800397309 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65931402224406B800397309 /* AppDelegate.swift */; };
 		65931405224406B800397309 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65931404224406B800397309 /* LoginViewController.swift */; };
 		65931408224406B800397309 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65931406224406B800397309 /* Main.storyboard */; };
@@ -35,8 +39,11 @@
 		4427354D225F619300ACE0D6 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		4427354F225F61D900ACE0D6 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		44273551225F6F4900ACE0D6 /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataClass.swift"; sourceTree = "<group>"; };
-		44273552225F6F4900ACE0D6 /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
+
 		6536C705227B4A45008D615A /* FoodLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodLogViewController.swift; sourceTree = "<group>"; };
+
+		44E2F3F2226F603E00001529 /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
+
 		659313FF224406B800397309 /* Healthy Diet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Healthy Diet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65931402224406B800397309 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65931404224406B800397309 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -73,7 +80,7 @@
 			children = (
 				65931409224406B800397309 /* Healthy_Diet.xcdatamodeld */,
 				44273551225F6F4900ACE0D6 /* Person+CoreDataClass.swift */,
-				44273552225F6F4900ACE0D6 /* Person+CoreDataProperties.swift */,
+				44E2F3F2226F603E00001529 /* Person+CoreDataProperties.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -223,7 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44273554225F6F4900ACE0D6 /* Person+CoreDataProperties.swift in Sources */,
+				44E2F3F3226F603E00001529 /* Person+CoreDataProperties.swift in Sources */,
 				44273550225F61D900ACE0D6 /* MainPageViewController.swift in Sources */,
 				4427354E225F619300ACE0D6 /* CreateAccountViewController.swift in Sources */,
 				44273553225F6F4900ACE0D6 /* Person+CoreDataClass.swift in Sources */,
