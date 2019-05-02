@@ -9,14 +9,47 @@
 import UIKit
 
 class FoodLogViewController: UIViewController {
-
+    @IBOutlet weak var dateTextField: UITextField!
+    
+    private var datePicker: UIDatePicker?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        datePicker = UIDatePicker()
+        datePicker?.datePickerMode = .date
+        datePicker?.addTarget(self, action: #selector(FoodLogViewController.dateChanged(datePicker:)), for: .valueChanged)
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(FoodLogViewController.viewTapped(gestureRecognizer:)))
+        
+        view.addGestureRecognizer(tapGesture)
+        
+        dateTextField.inputView = datePicker
+        
+        getCurrentDate()
+    }
+    
+    @objc func viewTapped(gestureRecognizer: UITapGestureRecognizer){
+        view.endEditing(true)
     }
     
 
+    @objc func dateChanged(datePicker: UIDatePicker){
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        
+        dateTextField.text = dateFormatter.string(from: datePicker.date)
+        
+    }
+    
+    func getCurrentDate(){
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        
+        dateTextField.text = dateFormatter.string(from: Date.init())
+    }
     /*
     // MARK: - Navigation
 
