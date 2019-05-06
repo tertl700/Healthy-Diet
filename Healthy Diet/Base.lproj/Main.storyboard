@@ -125,7 +125,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qof-mA-bWP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1719" y="207"/>
+            <point key="canvasLocation" x="964" y="423"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="LP9-2f-hq4">
@@ -167,18 +167,33 @@
         <!--Main-->
         <scene sceneID="W0l-oO-oh2">
             <objects>
-                <viewController id="9ty-bI-FV8" sceneMemberID="viewController">
+                <viewController id="9ty-bI-FV8" customClass="MainPageViewController" customModule="Healthy_Diet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WjV-5g-k5u">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QmR-tp-Ljq" userLabel="ChartView">
+                                <rect key="frame" x="16" y="65" width="343" height="553"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QmR-tp-Ljq" firstAttribute="bottom" secondItem="Xhn-i8-gse" secondAttribute="bottom" id="MQ7-vW-Y0d"/>
+                            <constraint firstItem="QmR-tp-Ljq" firstAttribute="top" secondItem="Xhn-i8-gse" secondAttribute="top" constant="45" id="jRq-lo-Hh2"/>
+                            <constraint firstItem="Xhn-i8-gse" firstAttribute="trailing" secondItem="QmR-tp-Ljq" secondAttribute="trailing" constant="16" id="mc4-mh-OcO"/>
+                            <constraint firstItem="QmR-tp-Ljq" firstAttribute="leading" secondItem="Xhn-i8-gse" secondAttribute="leading" constant="16" id="qmM-9J-x1J"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Xhn-i8-gse"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Main" id="7fb-4N-ObQ"/>
+                    <connections>
+                        <outlet property="chartView" destination="QmR-tp-Ljq" id="7EA-Xq-AQA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RV9-SW-l3O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3702" y="-600"/>
+            <point key="canvasLocation" x="3701.5999999999999" y="-600.44977511244383"/>
         </scene>
         <!--Item 2-->
         <scene sceneID="T8T-Fv-VMv">
@@ -198,6 +213,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="dE7-5D-T9g"/>
+        <segue reference="GNI-sW-uMb"/>
     </inferredMetricsTieBreakers>
 </document>

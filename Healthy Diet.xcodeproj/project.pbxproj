@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1041ACEDABF0B4D641A030E1 /* Pods_Healthy_DietUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A648D3799D349D64BAE7D8BE /* Pods_Healthy_DietUITests.framework */; };
+		16D62996D435FC3B0ACD6DF8 /* Pods_Healthy_Diet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A79F4803DB867ADAB74163 /* Pods_Healthy_Diet.framework */; };
 		4427354E225F619300ACE0D6 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4427354D225F619300ACE0D6 /* CreateAccountViewController.swift */; };
 		44273550225F61D900ACE0D6 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4427354F225F61D900ACE0D6 /* MainPageViewController.swift */; };
 		44273553225F6F4900ACE0D6 /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44273551225F6F4900ACE0D6 /* Person+CoreDataClass.swift */; };
@@ -31,10 +33,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		35601F72E9C7889FFA50C5B7 /* Pods-Healthy DietUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Healthy DietUITests.debug.xcconfig"; path = "Target Support Files/Pods-Healthy DietUITests/Pods-Healthy DietUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4427354D225F619300ACE0D6 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		4427354F225F61D900ACE0D6 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		44273551225F6F4900ACE0D6 /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataClass.swift"; sourceTree = "<group>"; };
 		44273552225F6F4900ACE0D6 /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		5F9D647A776D0CB9E0391EF8 /* Pods-Healthy Diet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Healthy Diet.release.xcconfig"; path = "Target Support Files/Pods-Healthy Diet/Pods-Healthy Diet.release.xcconfig"; sourceTree = "<group>"; };
 		659313FF224406B800397309 /* Healthy Diet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Healthy Diet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65931402224406B800397309 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65931404224406B800397309 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +50,10 @@
 		65931416224406B800397309 /* Healthy DietUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Healthy DietUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6593141A224406B800397309 /* Healthy_DietUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Healthy_DietUITests.swift; sourceTree = "<group>"; };
 		6593141C224406B800397309 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65CDE5A243EE50F74F66544F /* Pods-Healthy Diet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Healthy Diet.debug.xcconfig"; path = "Target Support Files/Pods-Healthy Diet/Pods-Healthy Diet.debug.xcconfig"; sourceTree = "<group>"; };
+		698616FF79E63ACCD42E3E50 /* Pods-Healthy DietUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Healthy DietUITests.release.xcconfig"; path = "Target Support Files/Pods-Healthy DietUITests/Pods-Healthy DietUITests.release.xcconfig"; sourceTree = "<group>"; };
+		82A79F4803DB867ADAB74163 /* Pods_Healthy_Diet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Healthy_Diet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A648D3799D349D64BAE7D8BE /* Pods_Healthy_DietUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Healthy_DietUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16D62996D435FC3B0ACD6DF8 /* Pods_Healthy_Diet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1041ACEDABF0B4D641A030E1 /* Pods_Healthy_DietUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +92,8 @@
 				65931401224406B800397309 /* Healthy Diet */,
 				65931419224406B800397309 /* Healthy DietUITests */,
 				65931400224406B800397309 /* Products */,
+				BD4723B5BAF8F2BB874F2619 /* Pods */,
+				E567C06475F91128271EEF61 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,6 +131,27 @@
 			path = "Healthy DietUITests";
 			sourceTree = "<group>";
 		};
+		BD4723B5BAF8F2BB874F2619 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				65CDE5A243EE50F74F66544F /* Pods-Healthy Diet.debug.xcconfig */,
+				5F9D647A776D0CB9E0391EF8 /* Pods-Healthy Diet.release.xcconfig */,
+				35601F72E9C7889FFA50C5B7 /* Pods-Healthy DietUITests.debug.xcconfig */,
+				698616FF79E63ACCD42E3E50 /* Pods-Healthy DietUITests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E567C06475F91128271EEF61 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				82A79F4803DB867ADAB74163 /* Pods_Healthy_Diet.framework */,
+				A648D3799D349D64BAE7D8BE /* Pods_Healthy_DietUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +159,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6593141F224406B800397309 /* Build configuration list for PBXNativeTarget "Healthy Diet" */;
 			buildPhases = (
+				997BC0F70478FBC26D5CD375 /* [CP] Check Pods Manifest.lock */,
 				659313FB224406B800397309 /* Sources */,
 				659313FC224406B800397309 /* Frameworks */,
 				659313FD224406B800397309 /* Resources */,
+				451DC1597502ACAC179EA3EF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -143,6 +178,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 65931422224406B800397309 /* Build configuration list for PBXNativeTarget "Healthy DietUITests" */;
 			buildPhases = (
+				78E5937CC50BAE774AAD9528 /* [CP] Check Pods Manifest.lock */,
 				65931412224406B800397309 /* Sources */,
 				65931413224406B800397309 /* Frameworks */,
 				65931414224406B800397309 /* Resources */,
@@ -214,6 +250,75 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		451DC1597502ACAC179EA3EF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Healthy Diet/Pods-Healthy Diet-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Healthy Diet/Pods-Healthy Diet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		78E5937CC50BAE774AAD9528 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Healthy DietUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		997BC0F70478FBC26D5CD375 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Healthy Diet-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		659313FB224406B800397309 /* Sources */ = {
@@ -386,6 +491,7 @@
 		};
 		65931420224406B800397309 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65CDE5A243EE50F74F66544F /* Pods-Healthy Diet.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -404,6 +510,7 @@
 		};
 		65931421224406B800397309 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F9D647A776D0CB9E0391EF8 /* Pods-Healthy Diet.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -422,6 +529,7 @@
 		};
 		65931423224406B800397309 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35601F72E9C7889FFA50C5B7 /* Pods-Healthy DietUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -442,6 +550,7 @@
 		};
 		65931424224406B800397309 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 698616FF79E63ACCD42E3E50 /* Pods-Healthy DietUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

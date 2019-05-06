@@ -40,8 +40,9 @@ class LoginViewController: UIViewController {
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
         
         do {
-            person = try managedContext.fetch(fetchRequest).first
-            managedContext.delete(person!)
+            if let currentPerson = try managedContext.fetch(fetchRequest).first {
+                managedContext.delete(currentPerson)
+            }
             return false
         } catch {
             alertNotifyUser(message: "Fetch for person could not be performed.")
