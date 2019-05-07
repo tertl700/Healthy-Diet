@@ -18,7 +18,6 @@ class CreateAccountViewController: UIViewController, UIPickerViewDelegate, UIPic
     @IBOutlet weak var weightTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var ageTextField: UITextField!
-    
     @IBOutlet weak var picker: UIPickerView!
     
     var genderList = ["Male", "Female"]
