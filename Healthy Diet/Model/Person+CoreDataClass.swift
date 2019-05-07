@@ -12,7 +12,7 @@ import CoreData
 
 @objc(Person)
 public class Person: NSManagedObject {
-    convenience init?(name: String, age: Int16, gender: Int16, height: Double, weight: Double, activity: Double, weightDesire: Int16) {
+    convenience init?(name: String, age: Int16, gender: Int16, height: Double, weight: Double, activity: Double, weightDesire: Double) {
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
         
         guard let managedContext = appDelegate?.persistentContainer.viewContext, name != "" else {
@@ -41,7 +41,7 @@ public class Person: NSManagedObject {
         self.calorieCeiling = calTarget.1
     }
     
-    func determineCalorie(_ weight: Double, _ height: Double, _ age: Int16, _ activity: Double, _ gender: Int16, _ weightDesire: Int16) -> (Double, Double) {
+    func determineCalorie(_ weight: Double, _ height: Double, _ age: Int16, _ activity: Double, _ gender: Int16, _ weightDesire: Double) -> (Double, Double) {
         let rmr: Double
         let wrmr = 9.99 * weight
         let hrmr = 6.25 * height
