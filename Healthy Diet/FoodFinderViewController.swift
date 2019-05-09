@@ -43,10 +43,9 @@ class FoodFinderViewController: UIViewController, UITableViewDataSource, UITable
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "foodCell", for: indexPath)
         let n = foods[indexPath.row].foodName ?? ""
-        let c = String(foods[indexPath.row].calorie)
         let p = foods[indexPath.row].portion ?? ""
         
-        cell.textLabel?.text = "\(n), \(c) kcal"
+        cell.textLabel?.text = "\(n)"
         cell.detailTextLabel?.text = "\(p)"
         
         return cell
