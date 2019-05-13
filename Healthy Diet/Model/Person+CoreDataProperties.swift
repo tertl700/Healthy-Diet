@@ -10,7 +10,7 @@
 import Foundation
 import CoreData
 
-
+// Comment
 extension Person {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Person> {
