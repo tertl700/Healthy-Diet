@@ -281,17 +281,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select a Date" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="agg-Jd-JvV">
-                                <rect key="frame" x="100" y="70" width="175" height="30"/>
+                                <rect key="frame" x="100" y="50" width="175" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rr3-WM-OKe">
-                                <rect key="frame" x="0.0" y="150" width="375" height="468"/>
+                                <rect key="frame" x="0.0" y="160" width="375" height="458"/>
                                 <connections>
                                     <segue destination="otO-Tk-sOp" kind="embed" id="31W-YW-Dm4"/>
                                 </connections>
                             </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are 0% towards your daily calorie goal." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nHi-1i-Dcm">
+                                <rect key="frame" x="24.5" y="110" width="326.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -300,8 +306,10 @@
                             <constraint firstItem="Xhn-i8-gse" firstAttribute="trailing" secondItem="rr3-WM-OKe" secondAttribute="trailing" id="Xus-1f-cec"/>
                             <constraint firstItem="Xhn-i8-gse" firstAttribute="bottom" secondItem="rr3-WM-OKe" secondAttribute="bottom" id="gem-rN-hsQ"/>
                             <constraint firstItem="rr3-WM-OKe" firstAttribute="leading" secondItem="Xhn-i8-gse" secondAttribute="leading" id="jnh-No-U8j"/>
-                            <constraint firstItem="agg-Jd-JvV" firstAttribute="top" secondItem="Xhn-i8-gse" secondAttribute="top" constant="50" id="l55-ph-2tt"/>
-                            <constraint firstItem="rr3-WM-OKe" firstAttribute="top" secondItem="agg-Jd-JvV" secondAttribute="bottom" constant="50" id="ssi-VD-J9z"/>
+                            <constraint firstItem="agg-Jd-JvV" firstAttribute="top" secondItem="Xhn-i8-gse" secondAttribute="top" constant="30" id="l55-ph-2tt"/>
+                            <constraint firstItem="nHi-1i-Dcm" firstAttribute="centerX" secondItem="Xhn-i8-gse" secondAttribute="centerX" id="qxp-pR-cNI"/>
+                            <constraint firstItem="rr3-WM-OKe" firstAttribute="top" secondItem="agg-Jd-JvV" secondAttribute="bottom" constant="80" id="ssi-VD-J9z"/>
+                            <constraint firstItem="nHi-1i-Dcm" firstAttribute="top" secondItem="agg-Jd-JvV" secondAttribute="bottom" constant="30" id="who-uv-Zyc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Xhn-i8-gse"/>
                     </view>
@@ -319,7 +327,7 @@
             <objects>
                 <tableViewController id="otO-Tk-sOp" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="zfK-ev-x1j">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="468"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="458"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <sections>
