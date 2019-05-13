@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.99" systemVersion="18E226" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Food" representedClassName="Food" syncable="YES">
+        <attribute name="calorie" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="foodName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="portion" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="breakfastLog" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FoodLog" inverseName="breakfast" inverseEntity="FoodLog" syncable="YES"/>
+        <relationship name="dinnerLog" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FoodLog" inverseName="dinner" inverseEntity="FoodLog" syncable="YES"/>
+        <relationship name="lunchLog" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FoodLog" inverseName="lunch" inverseEntity="FoodLog" syncable="YES"/>
+    </entity>
+    <entity name="FoodLog" representedClassName="FoodLog" syncable="YES">
+        <attribute name="rawDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="totalCalorie" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="breakfast" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Food" inverseName="breakfastLog" inverseEntity="Food" syncable="YES"/>
+        <relationship name="dinner" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Food" inverseName="dinnerLog" inverseEntity="Food" syncable="YES"/>
+        <relationship name="lunch" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Food" inverseName="lunchLog" inverseEntity="Food" syncable="YES"/>
+    </entity>
     <entity name="Person" representedClassName="Person" syncable="YES">
         <attribute name="activity" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="age" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -12,6 +27,8 @@
         <attribute name="weightDesire" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Person" positionX="-54" positionY="-9" width="128" height="180"/>
+        <element name="Food" positionX="-54" positionY="27" width="128" height="135"/>
+        <element name="FoodLog" positionX="-45" positionY="45" width="128" height="120"/>
+        <element name="Person" positionX="-54" positionY="-9" width="128" height="120"/>
     </elements>
 </model>
