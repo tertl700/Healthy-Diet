@@ -19,6 +19,7 @@
 		44E2F3F3226F603E00001529 /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E2F3F2226F603E00001529 /* Person+CoreDataProperties.swift */; };
 		49849849747021165C0E36D9 /* Pods_Healthy_DietUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8377C890E9367713FCC1AB51 /* Pods_Healthy_DietUITests.framework */; };
 		6536C706227B4A45008D615A /* FoodLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6536C705227B4A45008D615A /* FoodLogViewController.swift */; };
+		656CC6D2228A74AD007014FE /* LogTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656CC6D1228A74AD007014FE /* LogTableViewController.swift */; };
 		65931403224406B800397309 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65931402224406B800397309 /* AppDelegate.swift */; };
 		65931405224406B800397309 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65931404224406B800397309 /* LoginViewController.swift */; };
 		65931408224406B800397309 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65931406224406B800397309 /* Main.storyboard */; };
@@ -53,6 +54,7 @@
 		44961BB422728ABD001E25E2 /* FoodLog+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FoodLog+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		44E2F3F2226F603E00001529 /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		6536C705227B4A45008D615A /* FoodLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodLogViewController.swift; sourceTree = "<group>"; };
+		656CC6D1228A74AD007014FE /* LogTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogTableViewController.swift; sourceTree = "<group>"; };
 		659313FF224406B800397309 /* Healthy Diet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Healthy Diet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65931402224406B800397309 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65931404224406B800397309 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				4474D618226616D700F41C52 /* FoodCalcViewController.swift */,
 				4474D61C2266417200F41C52 /* FoodFinderViewController.swift */,
 				6536C705227B4A45008D615A /* FoodLogViewController.swift */,
+				656CC6D1228A74AD007014FE /* LogTableViewController.swift */,
 				65931406224406B800397309 /* Main.storyboard */,
 				D139EE812288FDE700FE5AE9 /* ChartViewController.swift */,
 				6593140C224406B800397309 /* Assets.xcassets */,
@@ -350,6 +353,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				656CC6D2228A74AD007014FE /* LogTableViewController.swift in Sources */,
 				4474D619226616D700F41C52 /* FoodCalcViewController.swift in Sources */,
 				4474D61D2266417200F41C52 /* FoodFinderViewController.swift in Sources */,
 				44E2F3F3226F603E00001529 /* Person+CoreDataProperties.swift in Sources */,

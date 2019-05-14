@@ -10,6 +10,7 @@ import UIKit
 
 class FoodLogViewController: UIViewController {
     @IBOutlet weak var dateTextField: UITextField!
+    @IBOutlet weak var calorieProgressLabel: UILabel!
     
     private var datePicker: UIDatePicker?
     
