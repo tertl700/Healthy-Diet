@@ -31,7 +31,7 @@ class LoginViewController: UIViewController {
     }
     
     func fetchUser() -> Bool {
-        /*
+        
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return false
         }
@@ -42,14 +42,14 @@ class LoginViewController: UIViewController {
         
         do {
             person = try managedContext.fetch(fetchRequest).first
-            managedContext.delete(person!)
-            return false
+      //      managedContext.delete(person!)
+        //    return false
         } catch {
             alertNotifyUser(message: "Fetch for person could not be performed.")
             return false
         }
         if person == nil { return false }
-        */
+        
         return false
     }
     
