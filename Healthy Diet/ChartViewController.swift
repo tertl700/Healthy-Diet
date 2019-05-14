@@ -33,7 +33,7 @@ class ChartViewController: UIViewController {
         
         values[date] = currentEntry
         
-        let set1 = LineChartDataSet(entries: values, label: "Date")
+        let set1 = LineChartDataSet(values: values, label: "Date")
         let data = LineChartData(dataSet: set1)
         
         self.lineChart.data = data
