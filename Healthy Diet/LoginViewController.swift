@@ -31,6 +31,7 @@ class LoginViewController: UIViewController {
     }
     
     func fetchUser() -> Bool {
+        /*
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return false
         }
@@ -40,17 +41,17 @@ class LoginViewController: UIViewController {
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
         
         do {
-            if let currentPerson = try managedContext.fetch(fetchRequest).first {
-                managedContext.delete(currentPerson)
-            }
+            person = try managedContext.fetch(fetchRequest).first
+            //for testing purposes only, make sure to delete later
+            managedContext.delete(person!)
             return false
         } catch {
             alertNotifyUser(message: "Fetch for person could not be performed.")
             return false
         }
         if person == nil { return false }
-        
-        return true
+        */
+        return false
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

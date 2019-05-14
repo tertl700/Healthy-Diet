@@ -29,9 +29,7 @@ class MainPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(person?.name)
-        barChartUpdate()
-       
+        // Do any additional setup after loading the view.
         
     }
     
