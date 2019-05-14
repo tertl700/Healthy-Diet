@@ -15,7 +15,7 @@ class LogTableViewController: UITableViewController{
     var breakfastFoods: [Food] = []
     var lunchFoods: [Food] = []
     var dinnerFoods: [Food] = []
-    var foodLogItems: [FoodLog] = []
+    var foodLogItem: FoodLog?
     var selectType: MealType?
     var totalCalorie: Double = 0.0
     
@@ -45,8 +45,6 @@ class LogTableViewController: UITableViewController{
     func retrieveFoodData(){
         let fetchRequest:NSFetchRequest<Food> = Food.fetchRequest()
         
-        //let sortDescriptor = NSSortDescriptor(key: "rawDate", ascending: false)
-        
         do{
             try breakfastFoods = moc.fetch(fetchRequest)
             try lunchFoods = moc.fetch(fetchRequest)
@@ -71,11 +69,18 @@ class LogTableViewController: UITableViewController{
     
     func retrieveFoodLogData(){
         let fetchRequest:NSFetchRequest<FoodLog> = FoodLog.fetchRequest()
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "rawDate", ascending: false)]
 
         do{
-            try foodLogItems = moc.fetch(fetchRequest)
+            try foodLogItem = moc.fetch(fetchRequest).first
         } catch{
             print("Food Data exported unsuccessfully")
+        }
+        
+        if let foodLogItem = foodLogItem {
+            breakfastFoods = foodLogItem.breakfast?.allObjects as! [Food]
+            lunchFoods = foodLogItem.lunch?.allObjects as! [Food]
+            dinnerFoods = foodLogItem.dinner?.allObjects as! [Food]
         }
         
         self.tableView.reloadData()

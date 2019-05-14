@@ -31,8 +31,8 @@ public class FoodLog: NSManagedObject {
         self.init(entity: FoodLog.entity(), insertInto: managedContext)
         self.totalCalorie = calorie
         self.date = Date(timeIntervalSinceNow: 0)
-        self.breakfast?.addingObjects(from: breakfast)
-        self.lunch?.addingObjects(from: lunch)
-        self.dinner?.addingObjects(from: dinner)
+        self.breakfast = NSSet(array: breakfast)
+        self.lunch = NSSet(array: lunch)
+        self.dinner = NSSet(array: dinner)
     }
 }

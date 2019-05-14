@@ -36,7 +36,9 @@ class FoodCalcViewController: UIViewController, UITableViewDelegate, UITableView
                 let managedContext = foodLog.managedObjectContext
                 try managedContext?.save()
                 message = "food exported successfully"
+                emptyTableView()
             } catch {
+                print(error)
                 message = "food exported unsuccessfully"
             }
         }
@@ -135,6 +137,14 @@ class FoodCalcViewController: UIViewController, UITableViewDelegate, UITableView
             
             mealListTableView.reloadData()
         }
+    }
+    
+    func emptyTableView() {
+        breakfastFoods = []
+        lunchFoods = []
+        dinnerFoods = []
+        
+        mealListTableView.reloadData()
     }
     
     @IBAction func unwindToFoodCalc(for segue: UIStoryboardSegue) {
