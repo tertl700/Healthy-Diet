@@ -42,6 +42,7 @@ class LoginViewController: UIViewController {
         
         do {
             person = try managedContext.fetch(fetchRequest).first
+            //for testing purposes only, make sure to delete later
             managedContext.delete(person!)
             return false
         } catch {

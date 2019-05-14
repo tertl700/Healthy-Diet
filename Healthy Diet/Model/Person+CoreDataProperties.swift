@@ -25,6 +25,6 @@ extension Person {
     @NSManaged public var gender: Int16
     @NSManaged public var calorieFloor: Double
     @NSManaged public var calorieCeiling: Double
-    @NSManaged public var weightDesire: Int16
+    @NSManaged public var weightDesire: Double
 
 }
