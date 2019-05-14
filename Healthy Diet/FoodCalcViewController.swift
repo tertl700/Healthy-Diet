@@ -120,6 +120,23 @@ class FoodCalcViewController: UIViewController, UITableViewDelegate, UITableView
         return cell
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            switch indexPath.section {
+            case 0:
+                breakfastFoods.remove(at: indexPath.row)
+            case 1:
+                lunchFoods.remove(at: indexPath.row)
+            case 2:
+                dinnerFoods.remove(at: indexPath.row)
+            default:
+                break
+            }
+            
+            mealListTableView.reloadData()
+        }
+    }
+    
     @IBAction func unwindToFoodCalc(for segue: UIStoryboardSegue) {
         if let source = segue.source as? FoodFinderViewController {
             if let selectType = selectType {
