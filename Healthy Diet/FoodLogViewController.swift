@@ -46,12 +46,22 @@ class FoodLogViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        //retrieveFoodData()
         retrieveFoodLogData()
-        //let calorieCalc = retrievePersonData()
-        totalCalorie = calculateCalorie()
+        personItem = retrievePersonData()
+        var calorieDenominator: Double
         
-        let calorieNeeds = (totalCalorie)/(2000.0)
+        if let person = personItem {
+            calorieDenominator = person.calorieFloor
+        } else {
+            calorieDenominator = 2000
+        }
+        if let foodLog = foodLogItem {
+            totalCalorie = foodLog.totalCalorie
+        } else {
+            totalCalorie = calculateCalorie()
+        }
+        
+        let calorieNeeds = (totalCalorie)/(calorieDenominator)
         
         //let calorieProgress = String(format: "%f", calorieNeeds)
         calorieProgressLabel.text = String(format:"You are %.2f%% towards your daily calorie goal", calorieNeeds*100)
@@ -131,24 +141,21 @@ class FoodLogViewController: UIViewController, UITableViewDelegate, UITableViewD
         //self.tableView.reloadData()
     }
     
-    func retrievePersonData() -> Double{
+     func retrievePersonData() -> Person?{
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return 0.0
+            return nil
         }
         let moc = appDelegate.persistentContainer.viewContext
-        let fetchRequest:NSFetchRequest<Person> = Person.fetchRequest()
+        let fetchRequest: NSFetchRequest<Person> = Person.fetchRequest()
         
+        var person :Person?
         do{
-            try print(moc.fetch(fetchRequest).count)
-            try personItem = moc.fetch(fetchRequest).last
+            try person = moc.fetch(fetchRequest).last
         } catch{
             print("Food Data exported unsuccessfully")
         }
         
-        guard let calories = personItem?.calorieFloor else {return 0.0}
-        
-        return calories
-        
+        return person
     }
     
     func deleteFoodData() {
