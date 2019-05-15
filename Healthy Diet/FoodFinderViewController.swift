@@ -16,10 +16,12 @@ class FoodFinderViewController: UIViewController, UITableViewDataSource, UITable
     
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var foodTableView: UITableView!
+    @IBOutlet weak var searchButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        searchButton.layer.cornerRadius = searchButton.frame.size.width / 16
     }
     
     @IBAction func performSearch(_ sender: Any) {
@@ -38,6 +40,12 @@ class FoodFinderViewController: UIViewController, UITableViewDataSource, UITable
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return foods.count
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        let headerView = view as! UITableViewHeaderFooterView
+        headerView.backgroundView?.backgroundColor = .init(displayP3Red: 0, green: 0.59, blue: 1.0, alpha: 1.0)
+        headerView.textLabel?.textColor = .white
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

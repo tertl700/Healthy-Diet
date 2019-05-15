@@ -19,11 +19,19 @@ class FoodCalcViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet weak var mealListTableView: UITableView!
     @IBOutlet weak var selectButton: UIButton!
+    @IBOutlet weak var searchButton: UIButton!
+    @IBOutlet weak var exportButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         selectType = MealType.breakfast
+        
+        searchButton.layer.cornerRadius = searchButton.frame.size.width / 16
+        
+        selectButton.layer.cornerRadius = selectButton.frame.size.width / 16
+        
+        exportButton.layer.cornerRadius = exportButton.frame.size.width / 16
     }
     
     @IBAction func exportToFoodLog(_ sender: Any) {
@@ -86,6 +94,12 @@ class FoodCalcViewController: UIViewController, UITableViewDelegate, UITableView
             return ""
         }
     }
+    
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        let headerView = view as! UITableViewHeaderFooterView
+        headerView.backgroundView?.backgroundColor = .init(displayP3Red: 0, green: 0.59, blue: 1.0, alpha: 1.0)
+        headerView.textLabel?.textColor = .white
+    }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
@@ -135,7 +149,6 @@ class FoodCalcViewController: UIViewController, UITableViewDelegate, UITableView
             default:
                 break
             }
-            
             mealListTableView.reloadData()
         }
     }
