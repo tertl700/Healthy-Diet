@@ -457,7 +457,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rr3-WM-OKe">
                                 <rect key="frame" x="0.0" y="160" width="375" height="458"/>
                                 <connections>
-                                    <segue destination="otO-Tk-sOp" kind="embed" id="31W-YW-Dm4"/>
+                                    <segue destination="otO-Tk-sOp" kind="embed" identifier="foodLogDateSegue" id="31W-YW-Dm4"/>
                                 </connections>
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are 0% towards your daily calorie goal." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nHi-1i-Dcm">

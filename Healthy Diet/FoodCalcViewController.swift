@@ -36,6 +36,7 @@ class FoodCalcViewController: UIViewController, UITableViewDelegate, UITableView
                 let managedContext = foodLog.managedObjectContext
                 try managedContext?.save()
                 message = "food exported successfully"
+                managedContext?.reset()
                 emptyTableView()
             } catch {
                 print(error)

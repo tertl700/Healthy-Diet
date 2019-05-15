@@ -18,60 +18,72 @@ class LogTableViewController: UITableViewController{
     var foodLogItem: FoodLog?
     var selectType: MealType?
     var totalCalorie: Double = 0.0
-    
-    
-    
-    var moc:NSManagedObjectContext!
-    
-    let appDelegate = UIApplication.shared.delegate as? AppDelegate
-    
+    var dateSelected: Date?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //selectType = MealType.breakfast
 
-        moc = appDelegate?.persistentContainer.viewContext
-        deleteFoodData()
+        //moc = appDelegate?.persistentContainer.viewContext
+        //deleteFoodData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        retrieveFoodData()
+        //retrieveFoodData()
         retrieveFoodLogData()
         
         
     }
     
-    func retrieveFoodData(){
-        let fetchRequest:NSFetchRequest<Food> = Food.fetchRequest()
-        
-        do{
-            try breakfastFoods = moc.fetch(fetchRequest)
-            try lunchFoods = moc.fetch(fetchRequest)
-            try dinnerFoods = moc.fetch(fetchRequest)
-        } catch{
-            print("Food exported unsuccessfully")
-        }
-        
-        self.tableView.reloadData()
-        
-//        do{
-//            let result = try managedContext.fetch(fetchRequest)
+//    func retrieveFoodData(){
+//        let fetchRequest:NSFetchRequest<Food> = Food.fetchRequest()
 //
-//            for data in result as! [NSManagedObject]{
-//                return data
-//            }
-//        }catch let error as NSError{
-//                print(error.description)
-//            }
-        
-    }
+//        do{
+//            try breakfastFoods = moc.fetch(fetchRequest)
+//            try lunchFoods = moc.fetch(fetchRequest)
+//            try dinnerFoods = moc.fetch(fetchRequest)
+//        } catch{
+//            print("Food exported unsuccessfully")
+//        }
+//
+//        self.tableView.reloadData()
+//
+////        do{
+////            let result = try managedContext.fetch(fetchRequest)
+////
+////            for data in result as! [NSManagedObject]{
+////                return data
+////            }
+////        }catch let error as NSError{
+////                print(error.description)
+////            }
+//
+//    }
     
     func retrieveFoodLogData(){
+        guard let selectedDate = dateSelected else {
+            return
+        }
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        //let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        let moc = appDelegate.persistentContainer.viewContext
+        //var moc:NSManagedObjectContext!
+        
+        
         let fetchRequest:NSFetchRequest<FoodLog> = FoodLog.fetchRequest()
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "rawDate", ascending: false)]
 
+        let calendar = NSCalendar.current
+        let startDate = calendar.startOfDay(for: selectedDate)
+        let endDate = calendar.date(byAdding: .day, value: 1, to: startDate)
+        
+        fetchRequest.predicate = NSPredicate.init(format: "(rawDate >= %@) AND (rawDate < %@)", argumentArray: [startDate, endDate])
+        
         do{
+            try print(moc.fetch(fetchRequest).count)
             try foodLogItem = moc.fetch(fetchRequest).first
         } catch{
             print("Food Data exported unsuccessfully")
@@ -87,12 +99,17 @@ class LogTableViewController: UITableViewController{
     }
     
     func deleteFoodData() {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        let moc = appDelegate.persistentContainer.viewContext
+        
         let fetchReqeust = NSFetchRequest<NSFetchRequestResult>(entityName: "Food")
         let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchReqeust)
         
         do {
-            try moc!.execute(deleteRequest)
-            try moc!.save()
+            try moc.execute(deleteRequest)
+            try moc.save()
         } catch let error as NSError {
             print(error.description)
         }
