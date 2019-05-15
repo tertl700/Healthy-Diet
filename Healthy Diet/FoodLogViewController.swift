@@ -241,24 +241,21 @@ class FoodLogViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
         
         totalCalorie = calculateCalorie()
-        
-        //let foodPortion = foodItem.portion
-        //cell.detailTextLabel?.text = foodPortion
-        
-        //guard let foodDate = foodItem.breakfastLog?.rawDate as Date? else {return cell}
-        guard let foodDate = foodLog?.rawDate as Date? else {return cell}
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MMMM dd yyyy, hh:mm"
+
+//        guard let foodDate = foodLog?.rawDate as Date? else {return cell}
+//        let dateFormatter = DateFormatter()
+//        dateFormatter.dateFormat = "MMMM dd, yyyy"
         
         if let meal = mealFoods?[indexPath.row] {
             let name = meal.foodName ?? ""
-            cell.textLabel?.text = "\(name) \(meal.portion ?? "")"
+            cell.textLabel?.text = "\(name)"
+            //cell.textLabel?.text = "\(name) \(meal.portion ?? "")"
+            cell.detailTextLabel?.text = "\(meal.portion ?? "")"
         }
         
         
         
-        cell.detailTextLabel?.text = dateFormatter.string(from: foodDate)
-        //cell.detailTextLabel?.text = dateFormatter.string(from: dateSelected!)
+        //cell.detailTextLabel?.text = dateFormatter.string(from: foodDate)
         return cell
     }
     

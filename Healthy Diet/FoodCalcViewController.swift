@@ -130,7 +130,7 @@ class FoodCalcViewController: UIViewController, UITableViewDelegate, UITableView
             
         if let meal = mealFoods?[indexPath.row] {
             let name = meal.foodName ?? ""
-            cell.textLabel?.text = "\(name) \(meal.calorie)"
+            cell.textLabel?.text = "\(name)"
             cell.detailTextLabel?.text = meal.portion
         }
         
