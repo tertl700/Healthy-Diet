@@ -454,29 +454,57 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rr3-WM-OKe">
-                                <rect key="frame" x="0.0" y="160" width="375" height="458"/>
-                                <connections>
-                                    <segue destination="otO-Tk-sOp" kind="embed" identifier="foodLogDateSegue" id="31W-YW-Dm4"/>
-                                </connections>
-                            </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are 0% towards your daily calorie goal." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nHi-1i-Dcm">
                                 <rect key="frame" x="24.5" y="110" width="326.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KHe-nV-bdI">
+                                <rect key="frame" x="0.0" y="161" width="375" height="457"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="logCell" textLabel="vep-Uq-9uI" detailTextLabel="VCK-lv-JSU" style="IBUITableViewCellStyleSubtitle" id="bka-0Q-oEs">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bka-0Q-oEs" id="Dw5-Xh-hXQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vep-Uq-9uI">
+                                                    <rect key="frame" x="15" y="5" width="33.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VCK-lv-JSU">
+                                                    <rect key="frame" x="15" y="25.5" width="44" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="9ty-bI-FV8" id="Zp6-BJ-ost"/>
+                                    <outlet property="delegate" destination="9ty-bI-FV8" id="Spn-Vs-3nn"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="KHe-nV-bdI" firstAttribute="top" secondItem="nHi-1i-Dcm" secondAttribute="bottom" constant="30" id="EC8-hw-uIz"/>
                             <constraint firstItem="agg-Jd-JvV" firstAttribute="leading" secondItem="Xhn-i8-gse" secondAttribute="leading" constant="100" id="IQE-BJ-DiJ"/>
                             <constraint firstItem="Xhn-i8-gse" firstAttribute="trailing" secondItem="agg-Jd-JvV" secondAttribute="trailing" constant="100" id="O6r-WU-eRs"/>
-                            <constraint firstItem="Xhn-i8-gse" firstAttribute="trailing" secondItem="rr3-WM-OKe" secondAttribute="trailing" id="Xus-1f-cec"/>
-                            <constraint firstItem="Xhn-i8-gse" firstAttribute="bottom" secondItem="rr3-WM-OKe" secondAttribute="bottom" id="gem-rN-hsQ"/>
-                            <constraint firstItem="rr3-WM-OKe" firstAttribute="leading" secondItem="Xhn-i8-gse" secondAttribute="leading" id="jnh-No-U8j"/>
+                            <constraint firstItem="Xhn-i8-gse" firstAttribute="trailing" secondItem="KHe-nV-bdI" secondAttribute="trailing" id="VPy-yO-pdh"/>
+                            <constraint firstItem="Xhn-i8-gse" firstAttribute="bottom" secondItem="KHe-nV-bdI" secondAttribute="bottom" id="ap5-4s-iHX"/>
                             <constraint firstItem="agg-Jd-JvV" firstAttribute="top" secondItem="Xhn-i8-gse" secondAttribute="top" constant="30" id="l55-ph-2tt"/>
                             <constraint firstItem="nHi-1i-Dcm" firstAttribute="centerX" secondItem="Xhn-i8-gse" secondAttribute="centerX" id="qxp-pR-cNI"/>
-                            <constraint firstItem="rr3-WM-OKe" firstAttribute="top" secondItem="agg-Jd-JvV" secondAttribute="bottom" constant="80" id="ssi-VD-J9z"/>
+                            <constraint firstItem="KHe-nV-bdI" firstAttribute="leading" secondItem="Xhn-i8-gse" secondAttribute="leading" id="vST-b7-SLp"/>
                             <constraint firstItem="nHi-1i-Dcm" firstAttribute="top" secondItem="agg-Jd-JvV" secondAttribute="bottom" constant="30" id="who-uv-Zyc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Xhn-i8-gse"/>
@@ -485,6 +513,7 @@
                     <connections>
                         <outlet property="calorieProgressLabel" destination="nHi-1i-Dcm" id="E72-h3-duW"/>
                         <outlet property="dateTextField" destination="agg-Jd-JvV" id="Os6-nX-T5p"/>
+                        <outlet property="mealListTableView" destination="KHe-nV-bdI" id="duS-Cc-eAO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RV9-SW-l3O" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -496,7 +525,7 @@
             <objects>
                 <tableViewController id="otO-Tk-sOp" customClass="LogTableViewController" customModule="Healthy_Diet" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="zfK-ev-x1j">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="458"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
