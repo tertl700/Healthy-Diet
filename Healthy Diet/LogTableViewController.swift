@@ -62,9 +62,9 @@ class LogTableViewController: UITableViewController{
 //    }
     
     func retrieveFoodLogData(){
-        guard let selectedDate = dateSelected else {
-            return
-        }
+//        guard let selectedDate = dateSelected else {
+//            return
+//        }
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
         }
@@ -75,12 +75,12 @@ class LogTableViewController: UITableViewController{
         
         let fetchRequest:NSFetchRequest<FoodLog> = FoodLog.fetchRequest()
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "rawDate", ascending: false)]
-
-        let calendar = NSCalendar.current
-        let startDate = calendar.startOfDay(for: selectedDate)
-        let endDate = calendar.date(byAdding: .day, value: 1, to: startDate)
-        
-        fetchRequest.predicate = NSPredicate.init(format: "(rawDate >= %@) AND (rawDate < %@)", argumentArray: [startDate, endDate])
+//
+//        let calendar = NSCalendar.current
+//        let startDate = calendar.startOfDay(for: selectedDate)
+//        let endDate = calendar.date(byAdding: .day, value: 1, to: startDate)
+//
+//        fetchRequest.predicate = NSPredicate.init(format: "(rawDate >= %@) AND (rawDate < %@)", argumentArray: [startDate, endDate])
         
         do{
             try print(moc.fetch(fetchRequest).count)

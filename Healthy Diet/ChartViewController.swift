@@ -13,11 +13,12 @@ class ChartViewController: UIViewController {
 
     @IBOutlet weak var weightField: UITextField!
     @IBOutlet weak var lineChart: LineChartView!
+    var numbers: [Double] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setChartValues()
+        //setChartValues()
         
     }
     
@@ -27,7 +28,7 @@ class ChartViewController: UIViewController {
             return ChartDataEntry(x: Double(i), y: val)
         }
         
-        let date = 1
+        let date = 0
         let weight: Double = Double(weightField.text!) ?? 0
         let currentEntry: ChartDataEntry = ChartDataEntry(x: Double(date), y: weight)
         
@@ -40,7 +41,32 @@ class ChartViewController: UIViewController {
     }
     
     @IBAction func changeButtonClicked(_ sender: Any) {
-        setChartValues()
+        let input = Double(weightField.text!)
+        numbers.append(input!)
+        updateGraph()
+        weightField.text = ""
+        
+    }
+    
+    func updateGraph(){
+        var lineChartEntry = [ChartDataEntry]()
+        
+        for i in 0..<numbers.count {
+            let value = ChartDataEntry(x: Double(i), y: numbers[i])
+            
+            lineChartEntry.append(value)
+        }
+        
+        let line1 = LineChartDataSet(values: lineChartEntry, label: "Number")
+        
+        line1.colors = [NSUIColor.blue]
+        
+        let data = LineChartData()
+        
+        data.addDataSet(line1)
+        
+        lineChart.data = data
+        lineChart.chartDescription?.text = "Weight Tracker"
     }
     
     
