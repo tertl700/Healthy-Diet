@@ -7,13 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4427354E225F619300ACE0D6 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4427354D225F619300ACE0D6 /* CreateAccountViewController.swift */; };
+		44273550225F61D900ACE0D6 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4427354F225F61D900ACE0D6 /* MainPageViewController.swift */; };
+		44273553225F6F4900ACE0D6 /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44273551225F6F4900ACE0D6 /* Person+CoreDataClass.swift */; };
+		4474D619226616D700F41C52 /* FoodCalcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4474D618226616D700F41C52 /* FoodCalcViewController.swift */; };
+		4474D61D2266417200F41C52 /* FoodFinderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4474D61C2266417200F41C52 /* FoodFinderViewController.swift */; };
+		44961BB022721867001E25E2 /* Food+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44961BAC22721867001E25E2 /* Food+CoreDataClass.swift */; };
+		44961BB122721867001E25E2 /* Food+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44961BAD22721867001E25E2 /* Food+CoreDataProperties.swift */; };
+		44961BB222721867001E25E2 /* FoodLog+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44961BAE22721867001E25E2 /* FoodLog+CoreDataClass.swift */; };
+		44961BB522728ABD001E25E2 /* FoodLog+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44961BB422728ABD001E25E2 /* FoodLog+CoreDataProperties.swift */; };
+		44E2F3F3226F603E00001529 /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E2F3F2226F603E00001529 /* Person+CoreDataProperties.swift */; };
+		49849849747021165C0E36D9 /* Pods_Healthy_DietUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8377C890E9367713FCC1AB51 /* Pods_Healthy_DietUITests.framework */; };
+		6536C706227B4A45008D615A /* FoodLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6536C705227B4A45008D615A /* FoodLogViewController.swift */; };
+		658DA703228C0F8500FA3E3E /* UIViewXRadialGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658DA6F9228C0F8500FA3E3E /* UIViewXRadialGradient.swift */; };
+		658DA704228C0F8500FA3E3E /* UITextFieldX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658DA6FA228C0F8500FA3E3E /* UITextFieldX.swift */; };
+		658DA705228C0F8500FA3E3E /* UIButtonX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658DA6FB228C0F8500FA3E3E /* UIButtonX.swift */; };
+		658DA706228C0F8500FA3E3E /* UILabelX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658DA6FC228C0F8500FA3E3E /* UILabelX.swift */; };
+		658DA707228C0F8500FA3E3E /* UIViewAnchorPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658DA6FD228C0F8500FA3E3E /* UIViewAnchorPoint.swift */; };
+		658DA708228C0F8500FA3E3E /* UIViewControllerX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658DA6FE228C0F8500FA3E3E /* UIViewControllerX.swift */; };
+		658DA709228C0F8500FA3E3E /* UIImageViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658DA6FF228C0F8500FA3E3E /* UIImageViewX.swift */; };
+		658DA70A228C0F8500FA3E3E /* UIViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658DA700228C0F8500FA3E3E /* UIViewX.swift */; };
+		658DA70B228C0F8500FA3E3E /* UIVisualEffectViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658DA701228C0F8500FA3E3E /* UIVisualEffectViewX.swift */; };
+		658DA70C228C0F8500FA3E3E /* UISliderX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658DA702228C0F8500FA3E3E /* UISliderX.swift */; };
 		65931403224406B800397309 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65931402224406B800397309 /* AppDelegate.swift */; };
-		65931405224406B800397309 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65931404224406B800397309 /* ViewController.swift */; };
+		65931405224406B800397309 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65931404224406B800397309 /* LoginViewController.swift */; };
 		65931408224406B800397309 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65931406224406B800397309 /* Main.storyboard */; };
 		6593140B224406B800397309 /* Healthy_Diet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 65931409224406B800397309 /* Healthy_Diet.xcdatamodeld */; };
 		6593140D224406B800397309 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6593140C224406B800397309 /* Assets.xcassets */; };
 		65931410224406B800397309 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6593140E224406B800397309 /* LaunchScreen.storyboard */; };
 		6593141B224406B800397309 /* Healthy_DietUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6593141A224406B800397309 /* Healthy_DietUITests.swift */; };
+		BE3D220B0CB6E9D23BE40F45 /* Pods_Healthy_Diet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2E2AADD34D4A10F26B4EF9D /* Pods_Healthy_Diet.framework */; };
+		D139EE822288FDE700FE5AE9 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D139EE812288FDE700FE5AE9 /* ChartViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,9 +51,31 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		273B3DC1B8AB1C3D21D83093 /* Pods-Healthy Diet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Healthy Diet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Healthy Diet/Pods-Healthy Diet.debug.xcconfig"; sourceTree = "<group>"; };
+		4427354D225F619300ACE0D6 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		4427354F225F61D900ACE0D6 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
+		44273551225F6F4900ACE0D6 /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4474D618226616D700F41C52 /* FoodCalcViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCalcViewController.swift; sourceTree = "<group>"; };
+		4474D61C2266417200F41C52 /* FoodFinderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodFinderViewController.swift; sourceTree = "<group>"; };
+		44961BAC22721867001E25E2 /* Food+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Food+CoreDataClass.swift"; sourceTree = "<group>"; };
+		44961BAD22721867001E25E2 /* Food+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Food+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		44961BAE22721867001E25E2 /* FoodLog+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FoodLog+CoreDataClass.swift"; sourceTree = "<group>"; };
+		44961BB422728ABD001E25E2 /* FoodLog+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FoodLog+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		44E2F3F2226F603E00001529 /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		6536C705227B4A45008D615A /* FoodLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodLogViewController.swift; sourceTree = "<group>"; };
+		658DA6F9228C0F8500FA3E3E /* UIViewXRadialGradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewXRadialGradient.swift; sourceTree = "<group>"; };
+		658DA6FA228C0F8500FA3E3E /* UITextFieldX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldX.swift; sourceTree = "<group>"; };
+		658DA6FB228C0F8500FA3E3E /* UIButtonX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonX.swift; sourceTree = "<group>"; };
+		658DA6FC228C0F8500FA3E3E /* UILabelX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelX.swift; sourceTree = "<group>"; };
+		658DA6FD228C0F8500FA3E3E /* UIViewAnchorPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewAnchorPoint.swift; sourceTree = "<group>"; };
+		658DA6FE228C0F8500FA3E3E /* UIViewControllerX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerX.swift; sourceTree = "<group>"; };
+		658DA6FF228C0F8500FA3E3E /* UIImageViewX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewX.swift; sourceTree = "<group>"; };
+		658DA700228C0F8500FA3E3E /* UIViewX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewX.swift; sourceTree = "<group>"; };
+		658DA701228C0F8500FA3E3E /* UIVisualEffectViewX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIVisualEffectViewX.swift; sourceTree = "<group>"; };
+		658DA702228C0F8500FA3E3E /* UISliderX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISliderX.swift; sourceTree = "<group>"; };
 		659313FF224406B800397309 /* Healthy Diet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Healthy Diet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65931402224406B800397309 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		65931404224406B800397309 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		65931404224406B800397309 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		65931407224406B800397309 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6593140A224406B800397309 /* Healthy_Diet.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Healthy_Diet.xcdatamodel; sourceTree = "<group>"; };
 		6593140C224406B800397309 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,6 +84,12 @@
 		65931416224406B800397309 /* Healthy DietUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Healthy DietUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6593141A224406B800397309 /* Healthy_DietUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Healthy_DietUITests.swift; sourceTree = "<group>"; };
 		6593141C224406B800397309 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71EA82BE1D78A7292599C646 /* Pods-Healthy Diet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Healthy Diet.release.xcconfig"; path = "Pods/Target Support Files/Pods-Healthy Diet/Pods-Healthy Diet.release.xcconfig"; sourceTree = "<group>"; };
+		8377C890E9367713FCC1AB51 /* Pods_Healthy_DietUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Healthy_DietUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		86ABE716A98525ED2E293CBA /* Pods-Healthy DietUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Healthy DietUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Healthy DietUITests/Pods-Healthy DietUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A7AF07C3E044D6072D30CC5C /* Pods-Healthy DietUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Healthy DietUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Healthy DietUITests/Pods-Healthy DietUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D139EE812288FDE700FE5AE9 /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
+		F2E2AADD34D4A10F26B4EF9D /* Pods_Healthy_Diet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Healthy_Diet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE3D220B0CB6E9D23BE40F45 /* Pods_Healthy_Diet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,18 +105,52 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49849849747021165C0E36D9 /* Pods_Healthy_DietUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44273555225F6F4F00ACE0D6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				44961BAC22721867001E25E2 /* Food+CoreDataClass.swift */,
+				44961BAD22721867001E25E2 /* Food+CoreDataProperties.swift */,
+				44961BAE22721867001E25E2 /* FoodLog+CoreDataClass.swift */,
+				44961BB422728ABD001E25E2 /* FoodLog+CoreDataProperties.swift */,
+				65931409224406B800397309 /* Healthy_Diet.xcdatamodeld */,
+				44273551225F6F4900ACE0D6 /* Person+CoreDataClass.swift */,
+				44E2F3F2226F603E00001529 /* Person+CoreDataProperties.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		658DA6F8228C0F8500FA3E3E /* DesignableX */ = {
+			isa = PBXGroup;
+			children = (
+				658DA6F9228C0F8500FA3E3E /* UIViewXRadialGradient.swift */,
+				658DA6FA228C0F8500FA3E3E /* UITextFieldX.swift */,
+				658DA6FB228C0F8500FA3E3E /* UIButtonX.swift */,
+				658DA6FC228C0F8500FA3E3E /* UILabelX.swift */,
+				658DA6FD228C0F8500FA3E3E /* UIViewAnchorPoint.swift */,
+				658DA6FE228C0F8500FA3E3E /* UIViewControllerX.swift */,
+				658DA6FF228C0F8500FA3E3E /* UIImageViewX.swift */,
+				658DA700228C0F8500FA3E3E /* UIViewX.swift */,
+				658DA701228C0F8500FA3E3E /* UIVisualEffectViewX.swift */,
+				658DA702228C0F8500FA3E3E /* UISliderX.swift */,
+			);
+			path = DesignableX;
+			sourceTree = "<group>";
+		};
 		659313F6224406B700397309 = {
 			isa = PBXGroup;
 			children = (
 				65931401224406B800397309 /* Healthy Diet */,
 				65931419224406B800397309 /* Healthy DietUITests */,
 				65931400224406B800397309 /* Products */,
+				C7380C8F860215241CCAF724 /* Pods */,
+				A6B01E432788D1AE9DAB47BF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,13 +166,20 @@
 		65931401224406B800397309 /* Healthy Diet */ = {
 			isa = PBXGroup;
 			children = (
+				658DA6F8228C0F8500FA3E3E /* DesignableX */,
+				44273555225F6F4F00ACE0D6 /* Model */,
 				65931402224406B800397309 /* AppDelegate.swift */,
-				65931404224406B800397309 /* ViewController.swift */,
+				65931404224406B800397309 /* LoginViewController.swift */,
+				4427354F225F61D900ACE0D6 /* MainPageViewController.swift */,
+				4427354D225F619300ACE0D6 /* CreateAccountViewController.swift */,
+				4474D618226616D700F41C52 /* FoodCalcViewController.swift */,
+				4474D61C2266417200F41C52 /* FoodFinderViewController.swift */,
+				6536C705227B4A45008D615A /* FoodLogViewController.swift */,
 				65931406224406B800397309 /* Main.storyboard */,
+				D139EE812288FDE700FE5AE9 /* ChartViewController.swift */,
 				6593140C224406B800397309 /* Assets.xcassets */,
 				6593140E224406B800397309 /* LaunchScreen.storyboard */,
 				65931411224406B800397309 /* Info.plist */,
-				65931409224406B800397309 /* Healthy_Diet.xcdatamodeld */,
 			);
 			path = "Healthy Diet";
 			sourceTree = "<group>";
@@ -99,6 +193,26 @@
 			path = "Healthy DietUITests";
 			sourceTree = "<group>";
 		};
+		A6B01E432788D1AE9DAB47BF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F2E2AADD34D4A10F26B4EF9D /* Pods_Healthy_Diet.framework */,
+				8377C890E9367713FCC1AB51 /* Pods_Healthy_DietUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C7380C8F860215241CCAF724 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				273B3DC1B8AB1C3D21D83093 /* Pods-Healthy Diet.debug.xcconfig */,
+				71EA82BE1D78A7292599C646 /* Pods-Healthy Diet.release.xcconfig */,
+				A7AF07C3E044D6072D30CC5C /* Pods-Healthy DietUITests.debug.xcconfig */,
+				86ABE716A98525ED2E293CBA /* Pods-Healthy DietUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +220,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6593141F224406B800397309 /* Build configuration list for PBXNativeTarget "Healthy Diet" */;
 			buildPhases = (
+				997BC0F70478FBC26D5CD375 /* [CP] Check Pods Manifest.lock */,
 				659313FB224406B800397309 /* Sources */,
 				659313FC224406B800397309 /* Frameworks */,
 				659313FD224406B800397309 /* Resources */,
+				451DC1597502ACAC179EA3EF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,6 +239,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 65931422224406B800397309 /* Build configuration list for PBXNativeTarget "Healthy DietUITests" */;
 			buildPhases = (
+				78E5937CC50BAE774AAD9528 /* [CP] Check Pods Manifest.lock */,
 				65931412224406B800397309 /* Sources */,
 				65931413224406B800397309 /* Frameworks */,
 				65931414224406B800397309 /* Resources */,
@@ -149,9 +266,11 @@
 				TargetAttributes = {
 					659313FE224406B800397309 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 					65931415224406B800397309 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 659313FE224406B800397309;
 					};
 				};
@@ -195,14 +314,105 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		451DC1597502ACAC179EA3EF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Healthy Diet/Pods-Healthy Diet-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Healthy Diet/Pods-Healthy Diet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		78E5937CC50BAE774AAD9528 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Healthy DietUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		997BC0F70478FBC26D5CD375 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Healthy Diet-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		659313FB224406B800397309 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				658DA70A228C0F8500FA3E3E /* UIViewX.swift in Sources */,
+				658DA707228C0F8500FA3E3E /* UIViewAnchorPoint.swift in Sources */,
+				4474D619226616D700F41C52 /* FoodCalcViewController.swift in Sources */,
+				4474D61D2266417200F41C52 /* FoodFinderViewController.swift in Sources */,
+				658DA703228C0F8500FA3E3E /* UIViewXRadialGradient.swift in Sources */,
+				44E2F3F3226F603E00001529 /* Person+CoreDataProperties.swift in Sources */,
+				44273550225F61D900ACE0D6 /* MainPageViewController.swift in Sources */,
+				658DA706228C0F8500FA3E3E /* UILabelX.swift in Sources */,
+				658DA704228C0F8500FA3E3E /* UITextFieldX.swift in Sources */,
+				44961BB222721867001E25E2 /* FoodLog+CoreDataClass.swift in Sources */,
+				658DA708228C0F8500FA3E3E /* UIViewControllerX.swift in Sources */,
+				4427354E225F619300ACE0D6 /* CreateAccountViewController.swift in Sources */,
+				44961BB022721867001E25E2 /* Food+CoreDataClass.swift in Sources */,
+				44273553225F6F4900ACE0D6 /* Person+CoreDataClass.swift in Sources */,
+				658DA70B228C0F8500FA3E3E /* UIVisualEffectViewX.swift in Sources */,
+				44961BB522728ABD001E25E2 /* FoodLog+CoreDataProperties.swift in Sources */,
 				6593140B224406B800397309 /* Healthy_Diet.xcdatamodeld in Sources */,
-				65931405224406B800397309 /* ViewController.swift in Sources */,
+				D139EE822288FDE700FE5AE9 /* ChartViewController.swift in Sources */,
+				65931405224406B800397309 /* LoginViewController.swift in Sources */,
+				658DA705228C0F8500FA3E3E /* UIButtonX.swift in Sources */,
 				65931403224406B800397309 /* AppDelegate.swift in Sources */,
+				658DA70C228C0F8500FA3E3E /* UISliderX.swift in Sources */,
+				44961BB122721867001E25E2 /* Food+CoreDataProperties.swift in Sources */,
+				6536C706227B4A45008D615A /* FoodLogViewController.swift in Sources */,
+				658DA709228C0F8500FA3E3E /* UIImageViewX.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +572,7 @@
 		};
 		65931420224406B800397309 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 273B3DC1B8AB1C3D21D83093 /* Pods-Healthy Diet.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -373,13 +584,14 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "io.github.thomas-ertl.Healthy-Diet";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		65931421224406B800397309 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71EA82BE1D78A7292599C646 /* Pods-Healthy Diet.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -391,13 +603,14 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "io.github.thomas-ertl.Healthy-Diet";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 		65931423224406B800397309 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7AF07C3E044D6072D30CC5C /* Pods-Healthy DietUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -410,7 +623,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "io.github.thomas-ertl.Healthy-DietUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Healthy Diet";
 			};
@@ -418,6 +631,7 @@
 		};
 		65931424224406B800397309 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86ABE716A98525ED2E293CBA /* Pods-Healthy DietUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -430,7 +644,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "io.github.thomas-ertl.Healthy-DietUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Healthy Diet";
 			};
