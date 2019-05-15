@@ -18,6 +18,7 @@ class ChartViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        updateGraph()
         //setChartValues()
         
     }
@@ -57,7 +58,7 @@ class ChartViewController: UIViewController {
             lineChartEntry.append(value)
         }
         
-        let line1 = LineChartDataSet(values: lineChartEntry, label: "Number")
+        let line1 = LineChartDataSet(values: lineChartEntry, label: "Weight(lbs)")
         
         line1.colors = [NSUIColor.blue]
         

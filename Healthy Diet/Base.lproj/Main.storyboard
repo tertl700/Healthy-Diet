@@ -481,7 +481,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Xhn-i8-gse"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Main" id="7fb-4N-ObQ"/>
+                    <tabBarItem key="tabBarItem" title="Food Log" id="7fb-4N-ObQ"/>
                     <connections>
                         <outlet property="calorieProgressLabel" destination="nHi-1i-Dcm" id="E72-h3-duW"/>
                         <outlet property="dateTextField" destination="agg-Jd-JvV" id="Os6-nX-T5p"/>
@@ -539,7 +539,7 @@
             </objects>
             <point key="canvasLocation" x="4434" y="-614"/>
         </scene>
-        <!--Item 2-->
+        <!--Weight Tracker-->
         <scene sceneID="T8T-Fv-VMv">
             <objects>
                 <viewController id="2lS-j3-5Pd" customClass="ChartViewController" customModule="Healthy_Diet" customModuleProvider="target" sceneMemberID="viewController">
@@ -551,8 +551,8 @@
                                 <rect key="frame" x="0.0" y="60" width="375" height="518"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5J-Qp-UL3">
-                                <rect key="frame" x="98" y="586" width="59" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight(lbs):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5J-Qp-UL3">
+                                <rect key="frame" x="98" y="586" width="93.5" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="a9a-t7-HAv"/>
                                 </constraints>
@@ -561,7 +561,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ufx-1M-Im2">
-                                <rect key="frame" x="180" y="583" width="100" height="30"/>
+                                <rect key="frame" x="214.5" y="583" width="100" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="Orh-Yj-KNH"/>
                                 </constraints>
@@ -570,7 +570,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWL-dG-DJX">
-                                <rect key="frame" x="300" y="583" width="53" height="30"/>
+                                <rect key="frame" x="334.5" y="583" width="53" height="30"/>
                                 <state key="normal" title="Change"/>
                                 <connections>
                                     <action selector="changeButtonClicked:" destination="2lS-j3-5Pd" eventType="touchUpInside" id="ZiB-i7-PLG"/>
@@ -592,7 +592,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xmo-D5-S8c"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="ogg-Yx-wKc"/>
+                    <tabBarItem key="tabBarItem" title="Weight Tracker" id="ogg-Yx-wKc"/>
                     <connections>
                         <outlet property="lineChart" destination="08D-xA-d71" id="rBo-89-xXc"/>
                         <outlet property="weightField" destination="ufx-1M-Im2" id="Mqz-Vn-3G1"/>
