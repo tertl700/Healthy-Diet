@@ -20,8 +20,10 @@ class FoodLogViewController: UIViewController, UITableViewDelegate, UITableViewD
     var lunchFoods: [Food] = []
     var dinnerFoods: [Food] = []
     var foodLogItem: FoodLog?
+    var personItem: Person?
     var selectType: MealType?
     var totalCalorie: Double = 0.0
+    var dailyCalories: Double = 0.0
     var dateSelected: Date?
     
     private var datePicker: UIDatePicker?
@@ -46,7 +48,13 @@ class FoodLogViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewWillAppear(_ animated: Bool) {
         //retrieveFoodData()
         retrieveFoodLogData()
+        //let calorieCalc = retrievePersonData()
+        totalCalorie = calculateCalorie()
         
+        let calorieNeeds = (totalCalorie)/(2000.0)
+        
+        //let calorieProgress = String(format: "%f", calorieNeeds)
+        calorieProgressLabel.text = String(format:"You are %.2f%% towards your daily calorie goal", calorieNeeds*100)
         
     }
     
@@ -116,8 +124,29 @@ class FoodLogViewController: UIViewController, UITableViewDelegate, UITableViewD
             dinnerFoods = foodLogItem.dinner?.allObjects as! [Food]
         }
         
+        
         mealListTableView.reloadData()
         //self.tableView.reloadData()
+    }
+    
+    func retrievePersonData() -> Double{
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return 0.0
+        }
+        let moc = appDelegate.persistentContainer.viewContext
+        let fetchRequest:NSFetchRequest<Person> = Person.fetchRequest()
+        
+        do{
+            try print(moc.fetch(fetchRequest).count)
+            try personItem = moc.fetch(fetchRequest).last
+        } catch{
+            print("Food Data exported unsuccessfully")
+        }
+        
+        guard let calories = personItem?.calorieFloor else {return 0.0}
+        
+        return calories
+        
     }
     
     func deleteFoodData() {
@@ -191,6 +220,8 @@ class FoodLogViewController: UIViewController, UITableViewDelegate, UITableViewD
             mealFoods = nil
         }
         
+        totalCalorie = calculateCalorie()
+        
         
         if let meal = mealFoods?[indexPath.row] {
             let name = meal.foodName ?? ""
@@ -206,7 +237,7 @@ class FoodLogViewController: UIViewController, UITableViewDelegate, UITableViewD
         dateFormatter.dateFormat = "MMMM dd yyyy, hh:mm"
         
         cell.detailTextLabel?.text = dateFormatter.string(from: foodDate)
-        
+        //cell.detailTextLabel?.text = String(totalCalorie)
         return cell
     }
     
@@ -226,5 +257,14 @@ class FoodLogViewController: UIViewController, UITableViewDelegate, UITableViewD
             mealListTableView.reloadData()
         }
     }
+    
+    func calculateCalorie() -> Double {
+        var calorie = 0.0
+        calorie += breakfastFoods.reduce(0.0) { cal,food in cal + food.calorie }
+        calorie += lunchFoods.reduce(0.0) { cal,food in cal + food.calorie }
+        calorie += dinnerFoods.reduce(0.0) { cal,food in cal + food.calorie }
+        return calorie
+    }
+
 
 }
