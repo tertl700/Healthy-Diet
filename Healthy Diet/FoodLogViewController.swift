@@ -55,11 +55,13 @@ class FoodLogViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         //let calorieProgress = String(format: "%f", calorieNeeds)
         calorieProgressLabel.text = String(format:"You are %.2f%% towards your daily calorie goal", calorieNeeds*100)
-        
+        dateSelected = datePicker?.date
     }
     
     @objc func viewTapped(gestureRecognizer: UITapGestureRecognizer){
         view.endEditing(true)
+        //self.viewDidLoad()
+        self.viewWillAppear(true)
     }
     
 
@@ -104,12 +106,12 @@ class FoodLogViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         let fetchRequest:NSFetchRequest<FoodLog> = FoodLog.fetchRequest()
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "rawDate", ascending: false)]
-        //
-        //        let calendar = NSCalendar.current
-        //        let startDate = calendar.startOfDay(for: selectedDate)
-        //        let endDate = calendar.date(byAdding: .day, value: 1, to: startDate)
-        //
-        //        fetchRequest.predicate = NSPredicate.init(format: "(rawDate >= %@) AND (rawDate < %@)", argumentArray: [startDate, endDate])
+        dateSelected = datePicker?.date
+                let calendar = NSCalendar.current
+                let startDate = calendar.startOfDay(for: dateSelected!)
+                let endDate = startDate.addingTimeInterval(86400)
+        
+        fetchRequest.predicate = NSPredicate.init(format: "(rawDate > %@) AND (rawDate < %@)", argumentArray: [startDate, endDate])
         
         do{
             try print(moc.fetch(fetchRequest).count)
@@ -222,12 +224,6 @@ class FoodLogViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         totalCalorie = calculateCalorie()
         
-        
-        if let meal = mealFoods?[indexPath.row] {
-            let name = meal.foodName ?? ""
-            cell.textLabel?.text = "\(name) \(meal.portion ?? "")"
-        }
-        
         //let foodPortion = foodItem.portion
         //cell.detailTextLabel?.text = foodPortion
         
@@ -236,8 +232,15 @@ class FoodLogViewController: UIViewController, UITableViewDelegate, UITableViewD
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMMM dd yyyy, hh:mm"
         
+        if let meal = mealFoods?[indexPath.row] {
+            let name = meal.foodName ?? ""
+            cell.textLabel?.text = "\(name) \(meal.portion ?? "")"
+        }
+        
+        
+        
         cell.detailTextLabel?.text = dateFormatter.string(from: foodDate)
-        //cell.detailTextLabel?.text = String(totalCalorie)
+        //cell.detailTextLabel?.text = dateFormatter.string(from: dateSelected!)
         return cell
     }
     
