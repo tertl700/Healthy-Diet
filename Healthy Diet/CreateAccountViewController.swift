@@ -21,7 +21,7 @@ class CreateAccountViewController: UIViewController, UIPickerViewDelegate, UIPic
     @IBOutlet weak var picker: UIPickerView!
     
     var genderList = ["Male", "Female"]
-    var activityList = ["Sedentary", "Slighty Active", "Moderately Active", "Very Active", "Extremely Active"]
+    var activityList = ["Sedentary", "Slightly Active", "Moderately Active", "Very Active", "Extremely Active"]
     var footList = ["4", "5", "6", "7"]
     var inchList = [ "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"]
     

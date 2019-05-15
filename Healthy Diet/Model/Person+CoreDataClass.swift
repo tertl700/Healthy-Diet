@@ -59,10 +59,10 @@ public class Person: NSManagedObject {
         let cal1 = rmr * activity
         let cal2: Double
         switch weightDesire {
-        case 0:
+        case _ where weightDesire < weight:
             cal2 = cal1 - 500
             return (cal2, cal1)
-        case 1:
+        case _ where weightDesire > weight:
             cal2 = cal1 + 500
             return (cal1, cal2)
         default:
