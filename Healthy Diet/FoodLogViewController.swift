@@ -47,6 +47,9 @@ class FoodLogViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewWillAppear(_ animated: Bool) {
         //retrieveFoodData()
+        breakfastFoods.removeAll()
+        lunchFoods.removeAll()
+        dinnerFoods.removeAll()
         retrieveFoodLogData()
         //let calorieCalc = retrievePersonData()
         totalCalorie = calculateCalorie()
@@ -56,6 +59,7 @@ class FoodLogViewController: UIViewController, UITableViewDelegate, UITableViewD
         //let calorieProgress = String(format: "%f", calorieNeeds)
         calorieProgressLabel.text = String(format:"You are %.2f%% towards your daily calorie goal", calorieNeeds*100)
         dateSelected = datePicker?.date
+        
     }
     
     @objc func viewTapped(gestureRecognizer: UITapGestureRecognizer){
@@ -109,9 +113,9 @@ class FoodLogViewController: UIViewController, UITableViewDelegate, UITableViewD
         dateSelected = datePicker?.date
                 let calendar = NSCalendar.current
                 let startDate = calendar.startOfDay(for: dateSelected!)
-                let endDate = startDate.addingTimeInterval(86400)
+                let endDate = calendar.date(byAdding: .day, value: 1, to: startDate)
         
-        fetchRequest.predicate = NSPredicate.init(format: "(rawDate > %@) AND (rawDate < %@)", argumentArray: [startDate, endDate])
+        fetchRequest.predicate = NSPredicate.init(format: "(rawDate > %@) AND (rawDate < %@)", argumentArray: [startDate, endDate!])
         
         do{
             try print(moc.fetch(fetchRequest).count)
